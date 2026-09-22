@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: trocar pelo domínio final antes de publicar
+Sitemap: https://DOMINIO-FINAL-AQUI.com.br/sitemap.xml

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vistoria Pré-Compra em Curitiba | Grid Car Check</title>
+  <meta name="description"
+    content="Vistoria pré-compra (cautelar) em Curitiba a partir de R$ 500. Especialista com app próprio: o laudo sai na hora. Vídeos ao vivo, sem comissão. Fale no WhatsApp.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#101317">
+  <!-- TODO: trocar pelo domínio final antes de publicar (aparece aqui, no og:url, no twitter:image,
+       no JSON-LD abaixo, em robots.txt e em sitemap.xml — procure "DOMINIO-FINAL-AQUI" nesses arquivos) -->
+  <link rel="canonical" href="https://DOMINIO-FINAL-AQUI.com.br/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://DOMINIO-FINAL-AQUI.com.br/">
+  <meta property="og:site_name" content="Grid Car Check">
+  <meta property="og:title" content="Antes de assinar, peça a vistoria | Grid Car Check">
+  <meta property="og:description"
+    content="Vistoria técnica pré-compra de carro usado em Curitiba e região. A partir de R$ 500, com laudo gerado na hora pelo app da Grid.">
+  <meta property="og:image" content="https://DOMINIO-FINAL-AQUI.com.br/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Grid Car Check — vistoria pré-compra em Curitiba, a partir de R$ 500">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Antes de assinar, peça a vistoria | Grid Car Check">
+  <meta name="twitter:description"
+    content="Vistoria técnica pré-compra de carro usado em Curitiba e região. A partir de R$ 500.">
+  <meta name="twitter:image" content="https://DOMINIO-FINAL-AQUI.com.br/assets/images/og-image.png">
+
+  <link rel="icon" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Oswald:wght@600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Dados estruturados: Service (sem endereço fixo — o especialista vai até o carro) + FAQ visível na página.
+       TODO: quando houver avaliações reais do Google, adicionar AggregateRating aqui. Nunca com número inventado. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "serviceType": "Vistoria pré-compra de veículos",
+        "name": "Vistoria pré-compra Grid Car Check",
+        "description": "Vistoria técnica pré-compra de carros usados em Curitiba e região: estrutura, pintura, mecânica, scanner OBD, acessórios e documentação, com laudo gerado por aplicativo próprio.",
+        "areaServed": [
+          { "@type": "City", "name": "Curitiba" },
+          { "@type": "AdministrativeArea", "name": "Região Metropolitana de Curitiba" }
+        ],
+        "provider": {
+          "@type": "ProfessionalService",
+          "name": "Grid Car Check",
+          "image": "https://DOMINIO-FINAL-AQUI.com.br/assets/images/og-image.png",
+          "url": "https://DOMINIO-FINAL-AQUI.com.br/",
+          "telephone": "+5541998773856",
+          "priceRange": "R$500 - R$1200",
+          "areaServed": "Curitiba, PR",
+          "sameAs": ["https://instagram.com/grid.carconsulting"]
+        },
+        "offers": [
+          { "@type": "Offer", "name": "Vistoria — carro até R$ 100 mil", "price": "500", "priceCurrency": "BRL" },
+          { "@type": "Offer", "name": "Vistoria — carro de R$ 100 mil a R$ 300 mil", "price": "700", "priceCurrency": "BRL" },
+          { "@type": "Offer", "name": "Vistoria — carro de R$ 300 mil a R$ 500 mil", "price": "900", "priceCurrency": "BRL" },
+          { "@type": "Offer", "name": "Vistoria — carro de R$ 500 mil a R$ 1 milhão", "price": "1200", "priceCurrency": "BRL" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question", "name": "Quanto tempo leva a vistoria?",
+            "acceptedAnswer": { "@type": "Answer", "text": "De 2,5 a 3,5 horas, conforme o carro." }
+          },
+          {
+            "@type": "Question", "name": "O vendedor precisa aceitar?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A Grid combina o horário direto com o vendedor ou a loja e vai até o carro." }
+          },
+          {
+            "@type": "Question", "name": "O que o laudo cobre?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Registro fotográfico, observações por categoria (estrutura, pintura, mecânica, scanner OBD, acessórios e documentação) e a opinião do especialista." }
+          },
+          {
+            "@type": "Question", "name": "Quanto custa a vistoria pré-compra em Curitiba?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A partir de R$ 500. O valor varia conforme o preço do carro: até R$ 100 mil, R$ 500; de R$ 100 mil a R$ 300 mil, R$ 700; de R$ 300 mil a R$ 500 mil, R$ 900; de R$ 500 mil a R$ 1 milhão, R$ 1.200." }
+          },
+          {
+            "@type": "Question", "name": "Vistoria cautelar e vistoria pré-compra são a mesma coisa?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sim. São nomes diferentes para o mesmo tipo de serviço: uma inspeção técnica do carro antes da compra, para revelar o que o documento e o olho não mostram." }
+          },
+          {
+            "@type": "Question", "name": "A Grid decide se eu compro?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Não. A Grid mostra o que o carro tem. A decisão é sua." }
+          },
+          {
+            "@type": "Question", "name": "Onde vocês atendem?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Curitiba e região metropolitana." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- TODO: Meta Pixel. Cole aqui o snippet do Pixel com o ID real (PIXEL_ID_AQUI).
+       O clique no WhatsApp já dispara fbq('track', 'Contact') em js/main.js quando o Pixel existe. -->
+</head>
+
+<body>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#topo" aria-label="Grid Car Check"><img class="logo" src="assets/images/grid-logo.png"
+          alt="Grid Car Check" width="146" height="37"></a>
+      <a href="#" class="btn btn--small" data-whatsapp>Falar no WhatsApp</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- 1. HERO (marcas de canto) -->
+    <section class="blueprint hero" id="topo">
+      <div class="container frame hero__grid">
+        <div class="hero__main">
+          <p class="eyebrow">Vistoria pré-compra · Curitiba e região</p>
+          <h1>Antes de assinar, <span class="accent">peça a vistoria pré-compra.</span></h1>
+          <p class="lead">Um especialista do seu lado confere o carro usado por 2,5 a 3,5 horas, manda vídeos ao vivo no
+            WhatsApp e entrega um laudo com fotos.</p>
+          <div class="hero__row">
+            <a href="#" class="btn btn--big" data-whatsapp>Pedir vistoria no WhatsApp</a>
+            <p class="from"><span class="eyebrow">Vistoria</span> <strong>a partir de R$&nbsp;500</strong></p>
+          </div>
+          <p class="faint">Sem comissão nem ligação com vendedor ou loja.</p>
+        </div>
+        <aside class="card hero__proof">
+          <p class="eyebrow eyebrow--sm">Caso real</p>
+          <a class="reel" href="https://www.instagram.com/p/DcM6Ga3tibB/" target="_blank" rel="noopener" data-reel
+            aria-label="Ver o Reel do caso de R$ 6 mil de desconto no Instagram (abre em nova aba)">
+            <video muted loop playsinline preload="none" poster="assets/video/reel-cliente-capa.jpg" aria-hidden="true"
+              tabindex="-1">
+              <source src="assets/video/reel-cliente.mp4" type="video/mp4">
+            </video>
+            <span class="reel__cta"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" />
+                <polygon points="10 8 16 12 10 16 10 8" />
+              </svg>Ver o Reel no Instagram</span>
+          </a>
+          <p class="quote">Ela economizou R$&nbsp;6 mil só porque pediu uma vistoria antes de assinar. <span
+              class="accent">Você já pediu a sua?</span></p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 2. A DOR -->
+    <section class="blueprint section">
+      <div class="container">
+        <p class="eyebrow">O que você não vê</p>
+        <h2>O que a documentação não mostra, <span class="accent">a Grid mede.</span></h2>
+        <p class="lead">Documento em dia não quer dizer carro em dia. Certas coisas passam batido no papel e no olho.
+        </p>
+        <dl class="ledger">
+          <div class="ledger__row"><dt>Batida mal reparada</dt><dd>Fica escondida sob a pintura nova.</dd></div>
+          <div class="ledger__row"><dt>Retoque e repintura</dt><dd>O olho não separa tinta original de tinta refeita.</dd></div>
+          <div class="ledger__row"><dt>Falhas ocultas</dt><dd>A central do carro guarda códigos de erro que ninguém vê de fora.</dd></div>
+        </dl>
+        <p class="faint">A Grid não acusa ninguém. Ela só mostra o que o carro realmente tem.</p>
+      </div>
+    </section>
+
+    <!-- 3. O QUE INSPECIONA -->
+    <section class="blueprint section" id="inspecao">
+      <div class="container">
+        <p class="eyebrow">O que é inspecionado</p>
+        <h2>6 frentes, <span class="accent">um laudo.</span></h2>
+        <div class="grid3 grid3--fronts">
+          <article class="card">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+            <h3>Estrutura</h3>
+            <p>Sinais de batida anterior na estrutura do carro.</p>
+          </article>
+          <article class="card">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <h3>Pintura</h3>
+            <p>O espessímetro mede a tinta e separa original de retoque ou repintura.</p>
+          </article>
+          <article class="card">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            <h3>Mecânica</h3>
+            <p>Como está a parte mecânica do carro no dia da vistoria.</p>
+          </article>
+          <article class="card">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg>
+            <h3>Scanner OBD</h3>
+            <p>Lê as falhas registradas na central do carro.</p>
+          </article>
+          <article class="card">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4h-7"/><path d="M10 4H3"/><path d="M21 12h-9"/><path d="M8 12H3"/><path d="M21 20h-5"/><path d="M12 20H3"/><path d="M14 2v4"/><path d="M8 10v4"/><path d="M16 18v4"/></svg>
+            <h3>Acessórios</h3>
+            <p>Confere os acessórios do carro.</p>
+          </article>
+          <article class="card">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+            <h3>Documentação</h3>
+            <p>Confere a documentação do veículo antes de você assinar.</p>
+          </article>
+        </div>
+        <p class="faint">A vistoria segue um roteiro do método do Matheus, registrado em app próprio.</p>
+      </div>
+    </section>
+
+    <!-- 4. COMO FUNCIONA -->
+    <section class="blueprint section">
+      <div class="container">
+        <p class="eyebrow">Como funciona</p>
+        <h2>Do WhatsApp à <span class="accent">decisão.</span></h2>
+        <ol class="steps">
+          <li class="card">
+            <p class="eyebrow eyebrow--sm">Passo 1</p>
+            <h3>Chama no WhatsApp</h3>
+            <p>Manda o modelo e o ano do carro que você está de olho.</p>
+          </li>
+          <li class="arrow" aria-hidden="true"><svg viewBox="0 0 48 24">
+              <path d="M2 12h42M34 4l10 8-10 8" />
+            </svg></li>
+          <li class="card">
+            <p class="eyebrow eyebrow--sm">Passo 2</p>
+            <h3>A Grid agenda</h3>
+            <p>Combina o horário direto com o vendedor ou a loja e vai até o carro.</p>
+          </li>
+          <li class="arrow" aria-hidden="true"><svg viewBox="0 0 48 24">
+              <path d="M2 12h42M34 4l10 8-10 8" />
+            </svg></li>
+          <li class="card">
+            <p class="eyebrow eyebrow--sm">Passo 3</p>
+            <h3>Vistoria com vídeos ao vivo</h3>
+            <p>Você recebe vídeos curtos no WhatsApp explicando o que está sendo encontrado.</p>
+          </li>
+          <li class="arrow" aria-hidden="true"><svg viewBox="0 0 48 24">
+              <path d="M2 12h42M34 4l10 8-10 8" />
+            </svg></li>
+          <li class="card">
+            <p class="eyebrow eyebrow--sm">Passo 4</p>
+            <h3>Laudo e decisão</h3>
+            <p>O app gera o laudo completo. Comprar, negociar ou desistir é decisão sua.</p>
+          </li>
+        </ol>
+        <p class="center"><a href="#" class="btn" data-whatsapp>Pedir vistoria no WhatsApp</a></p>
+      </div>
+    </section>
+
+    <!-- 5. PROVA -->
+    <section class="blueprint section">
+      <div class="container">
+        <p class="eyebrow">Na prática</p>
+        <h2>O dado que mudou <span class="accent">a decisão.</span></h2>
+        <div class="proof">
+          <article class="card">
+            <p class="eyebrow eyebrow--sm">Land Rover Freelander 2 · 2010</p>
+            <a class="reel reel--compact" href="https://www.instagram.com/p/DcRAlcpBnZU/" target="_blank"
+              rel="noopener" data-reel
+              aria-label="Ver o Reel da vistoria do Freelander no Instagram (abre em nova aba)">
+              <video muted loop playsinline preload="none" poster="assets/video/reel-freelander-capa.jpg"
+                aria-hidden="true" tabindex="-1">
+                <source src="assets/video/reel-freelander.mp4" type="video/mp4">
+              </video>
+              <span class="reel__cta"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" />
+                  <polygon points="10 8 16 12 10 16 10 8" />
+                </svg>Ver o Reel no Instagram</span>
+            </a>
+          </article>
+          <article class="card">
+            <p class="eyebrow eyebrow--sm">O que a vistoria encontrou</p>
+            <ul class="facts">
+              <li><strong>Pintura original</strong> confirmada pelo espessímetro</li>
+              <li><strong>35 códigos de erro</strong> ativos no scanner</li>
+              <li><strong>Vazamento de óleo</strong> identificado</li>
+            </ul>
+            <!-- TODO: quando houver a foto do laudo do Freelander, adicionar em assets/images/ e exibir aqui -->
+          </article>
+        </div>
+        <!-- TODO: "+10 vistorias já realizadas": exibir só depois de confirmar o número. -->
+        <p class="faint">O laudo também é evidência concreta para pedir desconto ao vendedor.</p>
+      </div>
+    </section>
+
+    <!-- 6. PREÇO -->
+    <section class="blueprint section section--center" id="preco">
+      <div class="container">
+        <p class="eyebrow">Preço</p>
+        <h2>A partir de <span class="accent">R$&nbsp;500.</span></h2>
+        <p class="lead">O valor varia conforme o preço do carro que você vai comprar.</p>
+        <div class="card card--hot frame frame--card price">
+          <table>
+            <caption class="sr">Preço da vistoria por faixa de valor do carro</caption>
+            <thead>
+              <tr>
+                <th scope="col">Valor do carro</th>
+                <th scope="col">Vistoria</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hot">
+                <th scope="row">Até R$&nbsp;100&nbsp;mil</th>
+                <td>R$&nbsp;500</td>
+              </tr>
+              <tr>
+                <th scope="row">De R$&nbsp;100&nbsp;mil a R$&nbsp;300&nbsp;mil</th>
+                <td>R$&nbsp;700</td>
+              </tr>
+              <tr>
+                <th scope="row">De R$&nbsp;300&nbsp;mil a R$&nbsp;500&nbsp;mil</th>
+                <td>R$&nbsp;900</td>
+              </tr>
+              <tr>
+                <th scope="row">De R$&nbsp;500&nbsp;mil a R$&nbsp;1&nbsp;milhão</th>
+                <td>R$&nbsp;1.200</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="eyebrow eyebrow--sm incl-title">Incluso em todas as faixas</p>
+          <ul class="incl">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <polygon points="10 8 16 12 10 16 10 8" />
+              </svg>Vídeos curtos ao vivo no WhatsApp</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+                <circle cx="12" cy="13" r="3" />
+              </svg>Registro fotográfico</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>Laudo gerado na hora pelo app da Grid, com observações por categoria e opinião do especialista</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>Sem comissão: a Grid não tem ligação com vendedor ou loja</li>
+          </ul>
+          <a href="#" class="btn btn--big btn--block" data-whatsapp>Pedir vistoria no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. QUEM FAZ -->
+    <section class="blueprint section">
+      <div class="container about">
+        <img class="about__photo" src="assets/images/matheus.jpg" alt="Matheus, especialista da Grid Car Check, sorrindo ao lado de um carro vistoriado em Curitiba" width="900" height="900" loading="lazy">
+        <div>
+          <p class="eyebrow">Quem faz</p>
+          <h2>Matheus, <span class="accent">do lado do comprador.</span></h2>
+          <p class="lead">Ele faz todas as vistorias pessoalmente. Não recebe comissão de vendedor nem de loja.</p>
+          <p class="lead">Criou um aplicativo próprio para seguir o mesmo roteiro em cada vistoria e gerar o laudo
+            completo na hora, no local, sem depender de anotação solta.</p>
+          <p class="lead">A Grid informa. Comprar, negociar ou desistir é sempre decisão sua.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FAQ -->
+    <section class="blueprint section">
+      <div class="container narrow">
+        <p class="eyebrow">Dúvidas</p>
+        <h2>Perguntas <span class="accent">frequentes</span></h2>
+        <div class="faq">
+          <details>
+            <summary>Quanto tempo leva a vistoria?</summary>
+            <p>De 2,5 a 3,5 horas, conforme o carro.</p>
+          </details>
+          <details>
+            <summary>O vendedor precisa aceitar?</summary>
+            <p>A Grid combina o horário direto com o vendedor ou a loja e vai até o carro.</p>
+          </details>
+          <details>
+            <summary>O que o laudo cobre?</summary>
+            <p>Registro fotográfico, observações por categoria (estrutura, pintura, mecânica, scanner OBD, acessórios e
+              documentação) e a opinião do especialista.</p>
+          </details>
+          <details>
+            <summary>Vistoria cautelar e vistoria pré-compra são a mesma coisa?</summary>
+            <p>Sim. São nomes diferentes para o mesmo tipo de serviço: uma inspeção técnica do carro antes da
+              compra, para revelar o que o documento e o olho não mostram.</p>
+          </details>
+          <details>
+            <summary>Quanto custa a vistoria pré-compra em Curitiba?</summary>
+            <p>A partir de R$ 500. O valor varia conforme o preço do carro: veja a tabela na seção de preço.</p>
+          </details>
+          <details>
+            <summary>A Grid decide se eu compro?</summary>
+            <p>Não. A Grid mostra o que o carro tem. A decisão é sua.</p>
+          </details>
+          <details>
+            <summary>Onde vocês atendem?</summary>
+            <p>Curitiba e região metropolitana.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secundário: Car Hunter -->
+    <section class="blueprint section section--tight">
+      <div class="container narrow">
+        <p class="eyebrow">Também na Grid</p>
+        <h2>Car Hunter</h2>
+        <p class="lead">Sem tempo para garimpar? A Grid busca no mercado carros que atendem aos seus critérios e entrega
+          já vistoriados.</p>
+        <!-- TODO: preço do Car Hunter (a confirmar) -->
+        <a href="#" class="btn btn--ghost" data-whatsapp
+          data-mensagem="Oi! Vi a Grid no Instagram e quero saber sobre o Car Hunter (busca de carro já vistoriado).">Saber
+          mais sobre o Car Hunter</a>
+      </div>
+    </section>
+
+    <!-- 9. CTA FINAL (invertida) -->
+    <section class="statement">
+      <div class="container narrow center">
+        <h2>Antes de assinar, peça a vistoria.</h2>
+        <p class="lead">Manda o modelo e o ano do carro no WhatsApp.</p>
+        <a href="#" class="btn btn--dark btn--big" data-whatsapp>Falar no WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="blueprint footer">
+    <div class="container footer__inner">
+      <img class="logo" src="assets/images/grid-logo.png" alt="Grid Car Check" width="110" height="28"
+        loading="lazy">
+      <p class="mono">Curitiba e região metropolitana</p>
+      <p class="mono"><a href="https://instagram.com/grid.carconsulting" target="_blank"
+          rel="noopener">@grid.carconsulting</a> · <a href="#" data-whatsapp>WhatsApp</a></p>
+      <p class="mono">© <span id="ano"></span> Grid Car Check</p>
+    </div>
+  </footer>
+
+  <a href="#" class="sticky-cta" data-whatsapp aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+    </svg>
+    <span>Falar no WhatsApp</span>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

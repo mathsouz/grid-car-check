@@ -1,0 +1,14 @@
+.DS_Store
+node_modules/
+.vercel/
+.env
+originais/
+
+# Ferramentas do Impeccable (não fazem parte do site publicado)
+.agents/
+.claude/
+.impeccable/
+skills-lock.json
+
+# Screenshots de QA (não fazem parte do site publicado)
+screenshots/
