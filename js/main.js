@@ -134,12 +134,24 @@ function configurarReel() {
     });
   });
   const economia = navigator.connection && navigator.connection.saveData;
-  if (!("IntersectionObserver" in window) || economia || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const reduzMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (economia || reduzMovimento) {
+    links.forEach((link) => {
+      const video = link.querySelector("video");
+      if (video) video.pause();
+    });
+    return;
+  }
+  if (!("IntersectionObserver" in window)) return;
   const obs = new IntersectionObserver((entradas) => {
     entradas.forEach((e) => {
       e.target.muted = true;
-      if (e.isIntersecting) e.target.play().catch(() => {});
-      else e.target.pause();
+      if (e.isIntersecting) {
+        const promessa = e.target.play();
+        if (promessa && typeof promessa.catch === "function") promessa.catch(() => {});
+      } else {
+        e.target.pause();
+      }
     });
   }, { threshold: 0.4 });
   links.forEach((link) => {

@@ -144,11 +144,12 @@
           <p class="eyebrow eyebrow--sm">Caso real</p>
           <a class="reel" href="https://www.instagram.com/p/DcM6Ga3tibB/" target="_blank" rel="noopener" data-reel
             aria-label="Ver o Reel do caso de R$ 6 mil de desconto no Instagram (abre em nova aba)">
-            <video muted loop playsinline preload="none" poster="assets/video/reel-cliente-capa.jpg" aria-hidden="true"
-              tabindex="-1">
+            <video muted loop playsinline webkit-playsinline autoplay preload="metadata"
+              poster="assets/video/reel-cliente-capa.jpg" aria-hidden="true" tabindex="-1">
               <source src="assets/video/reel-cliente.mp4" type="video/mp4">
             </video>
-            <span class="reel__cta"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" />
+            <span class="reel__cta"><svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
                 <polygon points="10 8 16 12 10 16 10 8" />
               </svg>Ver o Reel no Instagram</span>
           </a>
@@ -166,9 +167,18 @@
         <p class="lead">Documento em dia não quer dizer carro em dia. Certas coisas passam batido no papel e no olho.
         </p>
         <dl class="ledger">
-          <div class="ledger__row"><dt>Batida mal reparada</dt><dd>Fica escondida sob a pintura nova.</dd></div>
-          <div class="ledger__row"><dt>Retoque e repintura</dt><dd>O olho não separa tinta original de tinta refeita.</dd></div>
-          <div class="ledger__row"><dt>Falhas ocultas</dt><dd>A central do carro guarda códigos de erro que ninguém vê de fora.</dd></div>
+          <div class="ledger__row">
+            <dt>Batida mal reparada</dt>
+            <dd>Fica escondida sob a pintura nova.</dd>
+          </div>
+          <div class="ledger__row">
+            <dt>Retoque e repintura</dt>
+            <dd>O olho não separa tinta original de tinta refeita.</dd>
+          </div>
+          <div class="ledger__row">
+            <dt>Falhas ocultas</dt>
+            <dd>A central do carro guarda códigos de erro que ninguém vê de fora.</dd>
+          </div>
         </dl>
         <p class="faint">A Grid não acusa ninguém. Ela só mostra o que o carro realmente tem.</p>
       </div>
@@ -181,32 +191,62 @@
         <h2>6 frentes, <span class="accent">um laudo.</span></h2>
         <div class="grid3 grid3--fronts">
           <article class="card">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+              <path d="m3.3 7 8.7 5 8.7-5" />
+              <path d="M12 22V12" />
+            </svg>
             <h3>Estrutura</h3>
             <p>Sinais de batida anterior na estrutura do carro.</p>
           </article>
           <article class="card">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
             <h3>Pintura</h3>
             <p>O espessímetro mede a tinta e separa original de retoque ou repintura.</p>
           </article>
           <article class="card">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+            </svg>
             <h3>Mecânica</h3>
             <p>Como está a parte mecânica do carro no dia da vistoria.</p>
           </article>
           <article class="card">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" />
+            </svg>
             <h3>Scanner OBD</h3>
             <p>Lê as falhas registradas na central do carro.</p>
           </article>
           <article class="card">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4h-7"/><path d="M10 4H3"/><path d="M21 12h-9"/><path d="M8 12H3"/><path d="M21 20h-5"/><path d="M12 20H3"/><path d="M14 2v4"/><path d="M8 10v4"/><path d="M16 18v4"/></svg>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 4h-7" />
+              <path d="M10 4H3" />
+              <path d="M21 12h-9" />
+              <path d="M8 12H3" />
+              <path d="M21 20h-5" />
+              <path d="M12 20H3" />
+              <path d="M14 2v4" />
+              <path d="M8 10v4" />
+              <path d="M16 18v4" />
+            </svg>
             <h3>Acessórios</h3>
             <p>Confere os acessórios do carro.</p>
           </article>
           <article class="card">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+              <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+              <path d="M10 9H8" />
+              <path d="M16 13H8" />
+              <path d="M16 17H8" />
+            </svg>
             <h3>Documentação</h3>
             <p>Confere a documentação do veículo antes de você assinar.</p>
           </article>
@@ -263,14 +303,14 @@
         <div class="proof">
           <article class="card">
             <p class="eyebrow eyebrow--sm">Land Rover Freelander 2 · 2010</p>
-            <a class="reel reel--compact" href="https://www.instagram.com/p/DcRAlcpBnZU/" target="_blank"
-              rel="noopener" data-reel
-              aria-label="Ver o Reel da vistoria do Freelander no Instagram (abre em nova aba)">
-              <video muted loop playsinline preload="none" poster="assets/video/reel-freelander-capa.jpg"
-                aria-hidden="true" tabindex="-1">
+            <a class="reel reel--compact" href="https://www.instagram.com/p/DcRAlcpBnZU/" target="_blank" rel="noopener"
+              data-reel aria-label="Ver o Reel da vistoria do Freelander no Instagram (abre em nova aba)">
+              <video muted loop playsinline webkit-playsinline autoplay preload="metadata"
+                poster="assets/video/reel-freelander-capa.jpg" aria-hidden="true" tabindex="-1">
                 <source src="assets/video/reel-freelander.mp4" type="video/mp4">
               </video>
-              <span class="reel__cta"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" />
+              <span class="reel__cta"><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
                   <polygon points="10 8 16 12 10 16 10 8" />
                 </svg>Ver o Reel no Instagram</span>
             </a>
@@ -282,11 +322,10 @@
               <li><strong>35 códigos de erro</strong> ativos no scanner</li>
               <li><strong>Vazamento de óleo</strong> identificado</li>
             </ul>
-            <!-- TODO: quando houver a foto do laudo do Freelander, adicionar em assets/images/ e exibir aqui -->
           </article>
         </div>
-        <!-- TODO: "+10 vistorias já realizadas": exibir só depois de confirmar o número. -->
-        <p class="faint">O laudo também é evidência concreta para pedir desconto ao vendedor.</p>
+        <p class="faint">Mais de 300 vistorias já realizadas. O laudo também é evidência concreta para pedir desconto ao
+          vendedor.</p>
       </div>
     </section>
 
@@ -353,7 +392,9 @@
     <!-- 7. QUEM FAZ -->
     <section class="blueprint section">
       <div class="container about">
-        <img class="about__photo" src="assets/images/matheus.jpg" alt="Matheus, especialista da Grid Car Check, sorrindo ao lado de um carro vistoriado em Curitiba" width="900" height="900" loading="lazy">
+        <img class="about__photo" src="assets/images/matheus.jpg"
+          alt="Matheus, especialista da Grid Car Check, sorrindo ao lado de um carro vistoriado em Curitiba" width="900"
+          height="900" loading="lazy">
         <div>
           <p class="eyebrow">Quem faz</p>
           <h2>Matheus, <span class="accent">do lado do comprador.</span></h2>
@@ -361,6 +402,7 @@
           <p class="lead">Criou um aplicativo próprio para seguir o mesmo roteiro em cada vistoria e gerar o laudo
             completo na hora, no local, sem depender de anotação solta.</p>
           <p class="lead">A Grid informa. Comprar, negociar ou desistir é sempre decisão sua.</p>
+          <p class="faint">8 anos de experiência.</p>
         </div>
       </div>
     </section>
@@ -431,8 +473,7 @@
 
   <footer class="blueprint footer">
     <div class="container footer__inner">
-      <img class="logo" src="assets/images/grid-logo.png" alt="Grid Car Check" width="110" height="28"
-        loading="lazy">
+      <img class="logo" src="assets/images/grid-logo.png" alt="Grid Car Check" width="110" height="28" loading="lazy">
       <p class="mono">Curitiba e região metropolitana</p>
       <p class="mono"><a href="https://instagram.com/grid.carconsulting" target="_blank"
           rel="noopener">@grid.carconsulting</a> · <a href="#" data-whatsapp>WhatsApp</a></p>

@@ -35,7 +35,8 @@ O especialista fica do lado do comprador, sem comissão nem ligação com vended
 - Rastreamento: preservar UTMs, disparar evento no clique de WhatsApp, Meta Pixel com ID ainda a definir.
 - SEO local: título e descrição com "vistoria pré-compra Curitiba".
 - WhatsApp: +55 41 99877-3856 (número direto, em `js/main.js`; o link antigo `https://wa.me/message/UKKN5VZKRID4P1` fica só como reserva).
-- Indefinido: formas de pagamento, preço do Car Hunter, ID do Meta Pixel, domínio final.
+- Logo (`assets/images/grid-logo.png`), vídeo do reel do caso de R$ 6 mil e vídeo do reel do Freelander já foram fornecidos e estão publicados na página.
+- Indefinido: formas de pagamento, preço do Car Hunter, ID do Meta Pixel e do Google Analytics (o usuário só vai instalar quando o site for ao ar oficialmente), domínio final (o HTML ainda usa o placeholder `DOMINIO-FINAL-AQUI` no canonical, og:url, og:image, twitter:image e no JSON-LD). Foto do laudo do Freelander não entra mais: o vídeo do reel já cobre esse caso.
 
 ## Stack
 
@@ -43,13 +44,13 @@ Static HTML, CSS e JavaScript sem build, hospedado na Vercel via GitHub (definid
 
 ## Brand Commitments
 
-Nome oficial: Grid Car Check (confirmado pelo usuário; o Instagram continua @grid.carconsulting). O arquivo `assets/images/grid-logo.png` ainda traz o texto antigo "CAR CONSULTING" e precisa ser substituído pelo logo "CAR CHECK". O usuário indicou como vinculante o sistema visual do deck da Grid (desenho técnico, grafite e laranja), com o laranja da logo (#F93F06) em botões e faixas; o detalhamento visual pertence ao new-work e ao DESIGN.md.
+Nome oficial: Grid Car Check (confirmado pelo usuário; o Instagram continua @grid.carconsulting). O logo em `assets/images/grid-logo.png` já foi substituído pelo texto "CAR CHECK". O usuário indicou como vinculante o sistema visual do deck da Grid (desenho técnico, grafite e laranja), com o laranja da logo (#F93F06) em botões e faixas; o detalhamento visual pertence ao new-work e ao DESIGN.md.
 
 ## Evidence on Hand
 
-- "+10 vistorias já realizadas" (número a confirmar antes de publicar).
-- Reel da cliente que economizou R$ 6 mil por pedir vistoria antes de assinar. Frase aprovada: "Ela economizou R$ 6 mil só porque pediu uma vistoria antes de assinar. Você já pediu a sua?" O vídeo em si ainda não foi fornecido.
-- Caso Land Rover Freelander 2 (2010): pintura original confirmada pelo espessímetro, 35 códigos de erro ativos no scanner e vazamento de óleo. Sem foto do laudo ainda.
+- "+300 vistorias já realizadas", "8 anos de experiência" e "zero clientes insatisfeitos em 2024" — números confirmados pelo usuário e já publicados na página (seções "Na prática" e "Quem faz"). Os depoimentos nominais da landing antiga (Carlos S., Ana P., Roberto L.) ficaram de fora: o usuário pediu para inventar o texto das citações, o que foi recusado por ser depoimento fabricado atribuído a clientes reais; entram só com o texto original, se aparecer.
+- Reel da cliente que economizou R$ 6 mil por pedir vistoria antes de assinar. Frase aprovada: "Ela economizou R$ 6 mil só porque pediu uma vistoria antes de assinar. Você já pediu a sua?" Vídeo já publicado em `assets/video/reel-cliente.mp4`.
+- Caso Land Rover Freelander 2 (2010): pintura original confirmada pelo espessímetro, 35 códigos de erro ativos no scanner e vazamento de óleo. Vídeo do reel já publicado em `assets/video/reel-freelander.mp4`; a foto do laudo em si ainda não foi fornecida.
 - Foto do Matheus em `assets/images/matheus.jpg` (vinda da landing antiga).
 - O usuário confirmou que os depoimentos e números da landing antiga (Carlos S., Ana P., Roberto L.; "300+ análises", "8 anos", "zero clientes insatisfeitos em 2024") podem ser tratados como evidência real, sem indicar quais valem para uso. Antes de publicar qualquer um, perguntar qual exatamente entra.
 - Uso opcional só com fonte confirmada: carro com histórico de sinistro pode perder de 20% a 30% do valor de mercado. Fonte ainda não confirmada; não usar.
