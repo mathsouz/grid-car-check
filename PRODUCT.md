@@ -37,7 +37,8 @@ O especialista fica do lado do comprador, sem comissão nem ligação com vended
 - WhatsApp: +55 41 99877-3856 (número direto, em `js/main.js`; o link antigo `https://wa.me/message/UKKN5VZKRID4P1` fica só como reserva).
 - Logo (`assets/images/grid-logo.png`), vídeo do reel do caso de R$ 6 mil e vídeo do reel do Freelander já foram fornecidos e estão publicados na página.
 - Meta Pixel instalado (ID 866001702810701) no `<head>` do index.html; o clique de WhatsApp já dispara `fbq('track', 'Contact')` via `js/main.js`.
-- Indefinido: formas de pagamento, preço do Car Hunter, ID do Google Analytics (o usuário vai instalar quando quiser), domínio final (o HTML ainda usa o placeholder `DOMINIO-FINAL-AQUI` no canonical, og:url, og:image, twitter:image e no JSON-LD). Foto do laudo do Freelander não entra mais: o vídeo do reel já cobre esse caso.
+- Google Analytics 4 instalado (ID G-SVH3X3QNZ6) no `<head>` do index.html, antes de qualquer outro script; o clique de WhatsApp já dispara `gtag('event', 'whatsapp_click', ...)` via `js/main.js`.
+- Indefinido: formas de pagamento, preço do Car Hunter, domínio final (o HTML ainda usa o placeholder `DOMINIO-FINAL-AQUI` no canonical, og:url, og:image, twitter:image e no JSON-LD). Foto do laudo do Freelander não entra mais: o vídeo do reel já cobre esse caso.
 
 ## Stack
 
