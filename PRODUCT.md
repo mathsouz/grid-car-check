@@ -40,7 +40,8 @@ O especialista fica do lado do comprador, sem comissão nem ligação com vended
 - Google Analytics 4 instalado (ID G-SVH3X3QNZ6) no `<head>` do index.html, antes de qualquer outro script; o clique de WhatsApp já dispara `gtag('event', 'whatsapp_click', ...)` via `js/main.js`.
 - Domínio final definido e ativo na Vercel: gridcarcheck.com.br. Já atualizado no canonical, og:url, og:image, twitter:image, JSON-LD, `sitemap.xml` e `robots.txt`.
 - Indefinido: formas de pagamento, preço do Car Hunter. Foto do laudo do Freelander não entra mais: o vídeo do reel já cobre esse caso.
-- Arquitetura de SEO: a landing (`index.html`) continua intocada, só para tráfego pago/Instagram. SEO orgânico vive em páginas novas e separadas: `servicos/index.html` (Vistoria Pré-Compra + Car Hunter, com Schema Service/FAQPage) já existe; Home de SEO e Blog ainda não foram criados. `sitemap.xml` e `robots.txt` já cobrem `/` e `/servicos/`.
+- Arquitetura de SEO: a landing (`index.html`) continua intocada, só para tráfego pago/Instagram. SEO orgânico vive em páginas novas e separadas: `servicos/index.html` (Vistoria Pré-Compra + Car Hunter, com Schema Service/FAQPage) e agora `blog/index.html` (hub) + `blog/vistoria-cautelar-vs-pre-compra/index.html` (primeiro post, com Schema BlogPosting/BreadcrumbList/FAQPage). Home de SEO dedicada ainda não foi criada. `sitemap.xml` e `robots.txt` cobrem `/`, `/servicos/`, `/blog/` e o post.
+- Decisão de conteúdo: o post "vistoria cautelar x pré-compra" não inventa diferença entre os termos — o FAQ já publicado no site (landing e Serviços) afirma que são o mesmo serviço, então o post reforça isso com uma tabela mostrando que cobrem exatamente o mesmo, em vez de uma falsa comparação. Mantém consistência entre páginas do domínio.
 
 ## Stack
 
