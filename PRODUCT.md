@@ -38,7 +38,9 @@ O especialista fica do lado do comprador, sem comissão nem ligação com vended
 - Logo (`assets/images/grid-logo.png`), vídeo do reel do caso de R$ 6 mil e vídeo do reel do Freelander já foram fornecidos e estão publicados na página.
 - Meta Pixel instalado (ID 866001702810701) no `<head>` do index.html; o clique de WhatsApp já dispara `fbq('track', 'Contact')` via `js/main.js`.
 - Google Analytics 4 instalado (ID G-SVH3X3QNZ6) no `<head>` do index.html, antes de qualquer outro script; o clique de WhatsApp já dispara `gtag('event', 'whatsapp_click', ...)` via `js/main.js`.
-- Indefinido: formas de pagamento, preço do Car Hunter, domínio final (o HTML ainda usa o placeholder `DOMINIO-FINAL-AQUI` no canonical, og:url, og:image, twitter:image e no JSON-LD). Foto do laudo do Freelander não entra mais: o vídeo do reel já cobre esse caso.
+- Domínio final definido e ativo na Vercel: gridcarcheck.com.br. Já atualizado no canonical, og:url, og:image, twitter:image, JSON-LD, `sitemap.xml` e `robots.txt`.
+- Indefinido: formas de pagamento, preço do Car Hunter. Foto do laudo do Freelander não entra mais: o vídeo do reel já cobre esse caso.
+- Arquitetura de SEO: a landing (`index.html`) continua intocada, só para tráfego pago/Instagram. SEO orgânico vive em páginas novas e separadas: `servicos/index.html` (Vistoria Pré-Compra + Car Hunter, com Schema Service/FAQPage) já existe; Home de SEO e Blog ainda não foram criados. `sitemap.xml` e `robots.txt` já cobrem `/` e `/servicos/`.
 
 ## Stack
 

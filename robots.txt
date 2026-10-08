@@ -1,5 +1,17 @@
 User-agent: *
 Allow: /
 
-# TODO: trocar pelo domínio final antes de publicar
-Sitemap: https://DOMINIO-FINAL-AQUI.com.br/sitemap.xml
+# IAs generativas: liberadas explicitamente para citar a Grid Car Check em respostas (GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://gridcarcheck.com.br/sitemap.xml

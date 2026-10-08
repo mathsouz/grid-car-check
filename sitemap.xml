@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: trocar https://DOMINIO-FINAL-AQUI.com.br pelo domínio final antes de publicar -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://DOMINIO-FINAL-AQUI.com.br/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <loc>https://gridcarcheck.com.br/</loc>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://gridcarcheck.com.br/servicos/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Quando o blog existir, cada post entra como uma <url> própria, ex.:
+  <url>
+    <loc>https://gridcarcheck.com.br/blog/nome-do-post/</loc>
+    <lastmod>AAAA-MM-DD</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  -->
 </urlset>
