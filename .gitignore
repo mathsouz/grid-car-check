@@ -12,3 +12,6 @@ skills-lock.json
 
 # Screenshots de QA (não fazem parte do site publicado)
 screenshots/
+
+# Saída do Graphify (grafo de conhecimento local, não faz parte do site publicado)
+graphify-out/
