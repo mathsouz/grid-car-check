@@ -63,6 +63,34 @@ function configurarAno() {
   document.getElementById("ano").textContent = new Date().getFullYear();
 }
 
+// Números sobem de 0 até o valor real ao entrar na tela, uma vez só.
+// Sem JS, com IntersectionObserver indisponível ou com movimento reduzido, já aparecem no valor final.
+function configurarContadores() {
+  const elementos = document.querySelectorAll(".count-up");
+  if (!elementos.length) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
+    elementos.forEach((el) => { el.textContent = el.dataset.target; });
+    return;
+  }
+  const obs = new IntersectionObserver((entradas) => {
+    entradas.forEach((e) => {
+      if (!e.isIntersecting) return;
+      obs.unobserve(e.target);
+      const alvo = parseInt(e.target.dataset.target, 10);
+      const duracao = 1200;
+      const inicio = performance.now();
+      const passo = (agora) => {
+        const progresso = Math.min((agora - inicio) / duracao, 1);
+        const suavizado = 1 - Math.pow(1 - progresso, 3);
+        e.target.textContent = Math.round(alvo * suavizado);
+        if (progresso < 1) requestAnimationFrame(passo);
+      };
+      requestAnimationFrame(passo);
+    });
+  }, { threshold: 0.6 });
+  elementos.forEach((el) => obs.observe(el));
+}
+
 // Menu mobile: o botão abre/fecha a navegação; qualquer link clicado fecha de novo
 function configurarMenu() {
   const botao = document.querySelector(".nav-toggle");
@@ -185,3 +213,4 @@ configurarBotaoFixo();
 configurarMarcasDeCanto();
 configurarEntradaDosCards();
 configurarReel();
+configurarContadores();

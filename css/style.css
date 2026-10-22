@@ -82,6 +82,7 @@ a:focus-visible, summary:focus-visible { outline: 3px solid var(--text); outline
 .mono a { text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
 .lead { margin-top: 20px; color: var(--muted); max-width: 44rem; }
 .faint { margin-top: 28px; color: var(--faint); font-size: .9em; }
+.count-up { font-variant-numeric: tabular-nums; }
 .center .lead { margin-left: auto; margin-right: auto; }
 
 /* Botões (contraste #101317 sobre #F93F06 = 5,1:1) */
