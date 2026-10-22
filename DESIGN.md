@@ -44,6 +44,7 @@ typography:
     letterSpacing: "3px"
 rounded:
   md: "8px"
+  sm: "4px"
 spacing:
   xs: "8px"
   sm: "16px"
@@ -56,19 +57,19 @@ components:
     backgroundColor: "{colors.laranja-da-logo}"
     textColor: "{colors.grafite-de-garagem}"
     typography: "{typography.title}"
-    rounded: "{rounded.md}"
+    rounded: "{rounded.sm}"
     padding: "12px 32px"
     height: "52px"
   button-ghost:
     backgroundColor: "transparent"
     textColor: "{colors.branco-quente}"
-    rounded: "{rounded.md}"
+    rounded: "{rounded.sm}"
     padding: "12px 32px"
     height: "52px"
   button-dark:
     backgroundColor: "{colors.grafite-de-garagem}"
     textColor: "{colors.branco-quente}"
-    rounded: "{rounded.md}"
+    rounded: "{rounded.sm}"
     padding: "12px 32px"
     height: "60px"
   card:
@@ -153,23 +154,23 @@ Ritmo: 8, 16, 28 e 40px entre elementos, 16px entre cartões, 40px entre título
 Plano por padrão. A profundidade é tonal: painel grafite (#171B21) sobre fundo (#101317), separado por borda de 1px (#2A3038). O cartão em destaque ganha borda de 2px laranja e marcas de canto, sem sombra. A única sombra do sistema é a do botão fixo de WhatsApp no celular.
 
 ### Shadow Vocabulary
-- **Botão fixo** (`box-shadow: 0 8px 24px rgba(0,0,0,0.55)`): apenas o botão fixo de WhatsApp, para separá-lo do conteúdo que rola por baixo.
+- **Botão fixo** (`box-shadow: 0 8px 24px rgba(0,0,0,0.55)`): apenas o botão fixo de WhatsApp, para separá-lo do conteúdo que rola por baixo. Nenhum outro elemento — nem botão no hover — ganha sombra; a crítica de identidade visual de 2026-10-22 corrigiu um desvio onde `.btn:hover` tinha sombra suave, contra essa própria regra.
 
 ### Named Rules
-**The Flat-By-Default Rule.** Superfícies são planas em repouso. Se precisa destacar, use borda laranja de 2px e marcas de canto, não sombra.
+**The Flat-By-Default Rule.** Superfícies são planas em repouso. Se precisa destacar, use borda laranja de 2px e marcas de canto, não sombra. No hover, a ênfase vem de mudança de cor de borda, nunca de sombra ou levante maior que 2px.
 
 ## Shapes
 
-Linguagem de esquadro: raio de 8px em botões, cartões e tabela, borda de 1px nos cartões comuns e de 2px laranja no destaque. Marcas de canto são dois cantos opostos (superior esquerdo e inferior direito) com traço de 2px laranja, 24 a 40px de lado, afastados da borda (menos afastamento no celular). Ícones são Lucide, traço de 2px, em laranja. Setas entre cartões são retas, com ponta em ângulo, sem curva.
+Linguagem de esquadro: dois níveis de raio — 8px em superfícies grandes (cartões, tabela, foto, moldura do Reel) e **4px em controles pequenos** (botões, badge do Reel, botão fixo, toggle do menu mobile); raio uniforme em tudo soa "botão de app", raio menor nos controles pequenos lê mais técnico. Borda de 1px nos cartões comuns e de 2px laranja no destaque. Marcas de canto são dois cantos opostos (superior esquerdo e inferior direito) com traço de 2px laranja, 24 a 40px de lado, afastados da borda (menos afastamento no celular); animam com `lock-tl`/`lock-br` em 0.4s e uma curva de parada seca (`--ease-snap: cubic-bezier(.2,.8,.2,1)`), não a curva padrão do sistema — o momento é uma trava de foco, não um assentamento suave. Exceção: no cartão do Reel, só o canto superior esquerdo recebe a marca — o inferior direito colidiria com o badge do CTA. Ícones são traço de 2px em laranja, com ponta e junção **quadradas** (`stroke-linecap/linejoin: square`/`miter`), nunca arredondadas — ponta redonda em ícone de conteúdo é a mesma assinatura visual de app de consumo que o sistema evita no resto. Setas entre cartões são retas, com ponta em ângulo, sem curva.
 
 ## Components
 
 ### Buttons
-- **Shape:** cantos de 8px, altura de 52px (60px na versão grande, 44px na pequena do cabeçalho), padding 12×32px.
-- **Primary:** fundo Laranja da Logo, texto Grafite de Garagem, Oswald 600 de 20 a 22px. Um levante de 2px no hover.
+- **Shape:** cantos de 4px, altura de 52px (60px na versão grande, 44px na pequena do cabeçalho), padding 12×32px. Toda etiqueta de botão termina numa seta reta que desliza 4px no hover (`::after`, mesmo traço quadrado das outras setas do sistema).
+- **Primary:** fundo Laranja da Logo, texto Grafite de Garagem, Oswald 600 de 20 a 22px. Levante de 2px no hover, borda muda pra Laranja de Sinalização — sem sombra.
 - **Ghost:** transparente, texto branco quente, borda de 2px na cor de linha; a borda vira laranja no hover. Usado no Car Hunter, o serviço secundário.
-- **Dark:** fundo grafite e texto branco quente, só sobre a seção final laranja.
-- **Botão fixo (celular):** largura total com 16px de margem, Laranja da Logo, ícone message-circle, aparece quando o hero sai da tela.
+- **Dark:** fundo grafite e texto branco quente, só sobre a seção final laranja; borda muda pra Laranja de Sinalização no hover, sem sombra.
+- **Botão fixo (celular):** largura total com 16px de margem, Laranja da Logo, ícone message-circle, aparece quando o hero sai da tela. Continua sendo a única sombra do sistema.
 
 ### Cards / Containers
 - **Corner Style:** 8px.
@@ -184,7 +185,7 @@ Cabeçalho em mono cinza legenda; valores em Oswald 700 alinhados à direita e s
 Lista de `details` com divisor de 1px; pergunta em Oswald 600, indicador "+"/"−" laranja em mono. Foco visível com contorno branco de 3px.
 
 ### Navigation
-Barra fixa no topo com fundo grafite a 92% de opacidade e desfoque, borda inferior de 1px, logo à esquerda e um único botão de WhatsApp à direita. Sem menu de navegação: a página tem um só destino.
+Barra fixa no topo com fundo grafite a 92% de opacidade e desfoque, borda inferior de 1px, logo à esquerda. A partir de 2026-10, todas as páginas (inclusive a landing de anúncios) têm navegação entre Home/Serviços/Blog: links mono à direita da logo no desktop, menu hamburger (4px de raio, borda de linha) em dropdown abaixo de 900px. O botão de WhatsApp continua a ação mais à direita; no mobile ele some do header (a landing já tem o botão fixo) e dá lugar ao hamburger.
 
 ### Placeholder (temporário)
 Caixa tracejada em amarelo (#FFD166) com texto mono. Sinaliza conteúdo que o dono do produto ainda precisa fornecer (foto do laudo, Reel, formas de pagamento, preço do Car Hunter); deve ser removida antes de publicar.
