@@ -6,7 +6,8 @@ const CONFIG = {
   // Se ficar vazio, os botões usam o link do WhatsApp do site antigo (sem mensagem pré-preenchida).
   whatsappNumero: "5541998773856",
   whatsappLinkFallback: "https://wa.me/message/UKKN5VZKRID4P1",
-  mensagemPadrao: "Oi! Vi a Grid no Instagram e quero saber sobre a vistoria pré-compra. O carro é um ",
+  // Padrão neutro: serve Home/Serviços/Blog. A página /instagram/ sobrescreve com data-mensagem em cada link.
+  mensagemPadrao: "Oi! Vi o site da Grid e quero saber sobre a vistoria pré-compra. O carro é um ",
 };
 
 // ============================================================
