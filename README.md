@@ -6,10 +6,21 @@ Landing page estática em HTML, CSS e JavaScript, hospedada na Vercel via GitHub
 
 ```
 landing-page/
-├── index.html
+├── index.html                              # Home institucional (/)
+├── instagram/index.html                    # Landing de tráfego pago/Instagram (noindex)
+├── servicos/index.html
+├── blog/
+│   ├── index.html                          # Hub
+│   ├── vistoria-cautelar-vs-pre-compra/
+│   ├── como-saber-se-o-carro-foi-batido/
+│   ├── documentos-carro-usado-curitiba/
+│   └── quilometragem-adulterada/
 ├── css/style.css
 ├── js/main.js
-└── assets/images/
+├── assets/images/ e assets/video/
+├── sitemap.xml, robots.txt, vercel.json
+├── PRODUCT.md, DESIGN.md                    # contexto de produto e design system
+└── CLAUDE.md                                # instruções do projeto pra IA
 ```
 
 ## Rodar localmente
