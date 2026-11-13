@@ -59,7 +59,7 @@
         "@type": "Service",
         "serviceType": "Vistoria pré-compra de veículos",
         "name": "Vistoria Pré-Compra Grid Car Check",
-        "description": "Vistoria técnica pré-compra de carros usados em Curitiba e região metropolitana: estrutura, pintura, mecânica, scanner OBD, acessórios e documentação, com laudo gerado por aplicativo próprio. Duração de 2,5 a 3,5 horas.",
+        "description": "Vistoria técnica pré-compra de carros usados em Curitiba e região metropolitana: estrutura, pintura, mecânica, scanner OBD, acessórios e documentação, com laudo gerado por aplicativo próprio e Laudo 3D interativo do carro. Duração de 2,5 a 3,5 horas.",
         "areaServed": [
           { "@type": "City", "name": "Curitiba" },
           { "@type": "AdministrativeArea", "name": "Região Metropolitana de Curitiba" }
@@ -101,6 +101,18 @@
           {
             "@type": "Question", "name": "Quais são as 6 frentes inspecionadas na vistoria?",
             "acceptedAnswer": { "@type": "Answer", "text": "Estrutura, pintura (com espessímetro), mecânica, scanner OBD, acessórios e documentação." }
+          },
+          {
+            "@type": "Question", "name": "O que é o Laudo 3D da Grid Car Check?",
+            "acceptedAnswer": { "@type": "Answer", "text": "É um link que abre o carro em 3D no celular ou no computador, com cada peça que teve apontamento numerada e colorida conforme o status do laudo. Ao tocar na peça, aparecem a foto da vistoria, a medição e a observação. Vem com a vistoria, sem custo adicional, e não exige instalar app nem fazer cadastro." }
+          },
+          {
+            "@type": "Question", "name": "O Laudo 3D mostra meus dados pessoais?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Não. A página mostra fabricante, modelo, ano, carroceria e data da vistoria, mas não mostra nome, CPF, telefone, placa nem chassi. A página também pede aos buscadores que não a indexem." }
+          },
+          {
+            "@type": "Question", "name": "O Laudo 3D substitui o laudo em PDF?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Não. O PDF continua sendo o documento completo, com todas as fotos e o parecer técnico. O 3D sai dos mesmos dados do PDF e é a forma mais rápida de entender o que foi encontrado." }
           },
           {
             "@type": "Question", "name": "Em quais cidades a Grid Car Check atende?",
@@ -253,6 +265,11 @@
                 <path d="m9 12 2 2 4-4" />
               </svg>Laudo gerado na hora pelo app da Grid, com observações por categoria e opinião do especialista</li>
             <li><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+                <path d="m3.3 7 8.7 5 8.7-5" />
+                <path d="M12 22V12" />
+              </svg>Laudo 3D: link com o carro em 3D, peça por peça, para abrir no celular</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
                 <path d="m9 12 2 2 4-4" />
@@ -261,6 +278,52 @@
           <a href="#" class="btn btn--big btn--block" data-whatsapp
             data-mensagem="Oi! Vi o site da Grid e quero saber sobre a vistoria pré-compra. O carro é um ">Pedir vistoria no WhatsApp</a>
         </div>
+      </div>
+    </section>
+
+    <!-- LAUDO 3D -->
+    <section class="blueprint section" id="laudo-3d">
+      <div class="container">
+        <p class="eyebrow">Novidade · Laudo 3D</p>
+        <h2>Seu laudo em 3D, <span class="accent">peça por peça.</span></h2>
+        <p class="lead">Todo laudo da Vistoria Pré-Compra vem com um link que abre o carro em 3D no celular ou no computador, sem instalar nada e sem cadastro. Cada peça com apontamento aparece numerada e colorida conforme o status do laudo. O PDF continua sendo o documento completo, com todas as fotos e o parecer técnico; o 3D é o jeito mais rápido de entendê-lo.</p>
+        <figure class="shots">
+          <div class="shots__row">
+            <img src="/assets/images/laudo-3d-lataria.jpg" width="640" height="1271" loading="lazy" alt="Laudo 3D no celular: SUV em 3D com peças numeradas e coloridas por status, botões de vista e abas Lataria e Estrutura">
+            <img src="/assets/images/laudo-3d-apontamentos.jpg" width="640" height="1271" loading="lazy" alt="Laudo 3D no celular: lista de apontamentos da lataria com scanner, repinturas, peça avariada, para-brisa trocado e pneus">
+          </div>
+          <figcaption>Exemplo de Laudo 3D: o carro com as peças numeradas e a lista de apontamentos.</figcaption>
+        </figure>
+
+        <h3 style="margin-top:40px">O que você vê no Laudo 3D</h3>
+        <div class="grid3 grid3--fronts">
+          <article class="card">
+            <h3>Duas camadas</h3>
+            <p>Lataria por fora (pintura, vidros e pneus) e estrutura com a lataria transparente, mostrando 25 peças estruturais como longarinas, colunas e torres de amortecedor.</p>
+          </article>
+          <article class="card">
+            <h3>Cor por status</h3>
+            <p>Original, repintura, batido, danificado, reparo e substituído têm cada um sua cor. Ao tocar na peça, aparece o status exato do laudo.</p>
+          </article>
+          <article class="card">
+            <h3>Foto e medição</h3>
+            <p>Cada peça abre com a foto da vistoria, a espessura da tinta em µm, o sulco do pneu em mm e a observação do Matheus.</p>
+          </article>
+          <article class="card">
+            <h3>Scanner OBD</h3>
+            <p>Quando o scanner registra códigos de falha, eles aparecem num marcador sobre o carro e num cartão com os códigos listados.</p>
+          </article>
+          <article class="card">
+            <h3>Itens sem apontamento</h3>
+            <p>Uma lista mostra todas as peças avaliadas que estavam sem apontamento, para você ver o que foi conferido, não só o que deu problema.</p>
+          </article>
+          <article class="card">
+            <h3>Link sem dados pessoais</h3>
+            <p>A página não mostra nome, CPF, telefone, placa nem chassi. Dá pra mostrar ao vendedor, a um familiar ou ao mecânico de confiança.</p>
+          </article>
+        </div>
+
+        <p class="faint">Se o laudo for corrigido, o mesmo link passa a mostrar a versão nova. A Grid pode desativar o link a qualquer momento. Incluso em todas as faixas de preço. <a href="/blog/laudo-3d-vistoria-carro-usado/">Veja o passo a passo completo no blog.</a></p>
       </div>
     </section>
 
@@ -324,6 +387,18 @@
           <details>
             <summary>Quais são as 6 frentes inspecionadas na vistoria?</summary>
             <p>Estrutura, pintura (com espessímetro), mecânica, scanner OBD, acessórios e documentação.</p>
+          </details>
+          <details>
+            <summary>O que é o Laudo 3D da Grid Car Check?</summary>
+            <p>É um link que abre o carro em 3D no celular ou no computador, com cada peça que teve apontamento numerada e colorida conforme o status do laudo. Ao tocar na peça, aparecem a foto da vistoria, a medição e a observação. Vem com a vistoria, sem custo adicional, e não exige instalar app nem fazer cadastro.</p>
+          </details>
+          <details>
+            <summary>O Laudo 3D mostra meus dados pessoais?</summary>
+            <p>Não. A página mostra fabricante, modelo, ano, carroceria e data da vistoria, mas não mostra nome, CPF, telefone, placa nem chassi. A página também pede aos buscadores que não a indexem.</p>
+          </details>
+          <details>
+            <summary>O Laudo 3D substitui o laudo em PDF?</summary>
+            <p>Não. O PDF continua sendo o documento completo, com todas as fotos e o parecer técnico. O 3D sai dos mesmos dados do PDF e é a forma mais rápida de entender o que foi encontrado.</p>
           </details>
           <details>
             <summary>Em quais cidades a Grid Car Check atende?</summary>

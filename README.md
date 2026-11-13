@@ -14,7 +14,8 @@ landing-page/
 │   ├── vistoria-cautelar-vs-pre-compra/
 │   ├── como-saber-se-o-carro-foi-batido/
 │   ├── documentos-carro-usado-curitiba/
-│   └── quilometragem-adulterada/
+│   ├── quilometragem-adulterada/
+│   └── laudo-3d-vistoria-carro-usado/
 ├── css/style.css
 ├── js/main.js
 ├── assets/images/ e assets/video/

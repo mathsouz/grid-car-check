@@ -23,10 +23,11 @@ Site da Grid Car Check (vistoria técnica pré-compra de carros usados, Curitiba
 | `/blog/como-saber-se-o-carro-foi-batido/` | `blog/como-saber-se-o-carro-foi-batido/index.html` | Post. |
 | `/blog/documentos-carro-usado-curitiba/` | `blog/documentos-carro-usado-curitiba/index.html` | Post. |
 | `/blog/quilometragem-adulterada/` | `blog/quilometragem-adulterada/index.html` | Post. |
+| `/blog/laudo-3d-vistoria-carro-usado/` | `blog/laudo-3d-vistoria-carro-usado/index.html` | Post sobre o Laudo 3D. |
 
 **Não existe `/home/`** — foi unificado com `/` em nov/2026 (as duas páginas disputavam a mesma busca). `vercel.json` redireciona `/home` e `/home/` → `/` com 301. Não recriar a pasta `home/`.
 
-Cada página é um `index.html` independente (sem template/include compartilhado) — header, footer, menu e os scripts de analytics estão **duplicados em cada arquivo**. Qualquer mudança no header/menu/rodapé precisa ser replicada manualmente nas 8 páginas.
+Cada página é um `index.html` independente (sem template/include compartilhado) — header, footer, menu e os scripts de analytics estão **duplicados em cada arquivo**. Qualquer mudança no header/menu/rodapé precisa ser replicada manualmente nas 9 páginas.
 
 ## Convenções de código
 
