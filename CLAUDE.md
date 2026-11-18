@@ -18,6 +18,7 @@ Site da Grid Car Check (vistoria técnica pré-compra de carros usados, Curitiba
 | `/` | `index.html` | Home institucional de SEO. `index, follow`. |
 | `/instagram/` | `instagram/index.html` | Landing de tráfego pago/Instagram. `noindex, follow` — de propósito, não compete com `/` na busca. CTAs de WhatsApp mantêm o texto "Vi a Grid no Instagram" via `data-mensagem` explícito. |
 | `/servicos/` | `servicos/index.html` | Vistoria Pré-Compra + Car Hunter. |
+| `/car-hunter/` | `car-hunter/index.html` | Car Hunter (busca de carro já vistoriado, R$ 2.500). `index, follow`. |
 | `/blog/` | `blog/index.html` | Hub do blog. |
 | `/blog/vistoria-cautelar-vs-pre-compra/` | `blog/vistoria-cautelar-vs-pre-compra/index.html` | Post. |
 | `/blog/como-saber-se-o-carro-foi-batido/` | `blog/como-saber-se-o-carro-foi-batido/index.html` | Post. |
@@ -27,7 +28,7 @@ Site da Grid Car Check (vistoria técnica pré-compra de carros usados, Curitiba
 
 **Não existe `/home/`** — foi unificado com `/` em nov/2026 (as duas páginas disputavam a mesma busca). `vercel.json` redireciona `/home` e `/home/` → `/` com 301. Não recriar a pasta `home/`.
 
-Cada página é um `index.html` independente (sem template/include compartilhado) — header, footer, menu e os scripts de analytics estão **duplicados em cada arquivo**. Qualquer mudança no header/menu/rodapé precisa ser replicada manualmente nas 9 páginas.
+Cada página é um `index.html` independente (sem template/include compartilhado) — header, footer, menu e os scripts de analytics estão **duplicados em cada arquivo**. Qualquer mudança no header/menu/rodapé precisa ser replicada manualmente nas 10 páginas.
 
 ## Convenções de código
 

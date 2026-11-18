@@ -49,7 +49,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
 
-  <!-- Dados estruturados: dois Service (Vistoria Pré-Compra com preços, Car Hunter sem preço — ainda indefinido)
+  <!-- Dados estruturados: dois Service (Vistoria Pré-Compra com preços, Car Hunter com valor de R$ 2.500)
        + FAQPage espelhando exatamente o FAQ visível nesta página. -->
   <script type="application/ld+json">
   {
@@ -76,12 +76,14 @@
         "@type": "Service",
         "serviceType": "Busca e assessoria de compra de veículo",
         "name": "Car Hunter Grid Car Check",
-        "description": "A Grid Car Check busca no mercado carros que atendam aos critérios do cliente, em Curitiba e região metropolitana, e entrega cada carro já vistoriado. Valor sob consulta, conforme a busca.",
+        "description": "A Grid Car Check busca no mercado carros que atendam aos critérios do cliente, em Curitiba e região metropolitana, e entrega cada carro já vistoriado. Valor: R$ 2.500.",
+        "url": "https://gridcarcheck.com.br/car-hunter/",
         "areaServed": [
           { "@type": "City", "name": "Curitiba" },
           { "@type": "AdministrativeArea", "name": "Região Metropolitana de Curitiba" }
         ],
-        "provider": { "@id": "https://gridcarcheck.com.br/#empresa" }
+        "provider": { "@id": "https://gridcarcheck.com.br/#empresa" },
+        "offers": { "@type": "Offer", "name": "Car Hunter", "price": "2500", "priceCurrency": "BRL" }
       },
       {
         "@type": "FAQPage",
@@ -96,7 +98,7 @@
           },
           {
             "@type": "Question", "name": "Quanto custa o Car Hunter?",
-            "acceptedAnswer": { "@type": "Answer", "text": "O valor é sob consulta, conforme a busca e o carro encontrado." }
+            "acceptedAnswer": { "@type": "Answer", "text": "R$ 2.500, valor único, qualquer que seja o valor do carro. As vistorias de todos os carros candidatos estão incluídas." }
           },
           {
             "@type": "Question", "name": "Quais são as 6 frentes inspecionadas na vistoria?",
@@ -332,7 +334,7 @@
       <div class="container">
         <p class="eyebrow">Car Hunter</p>
         <h2>Busca e assessoria completa <span class="accent">de compra.</span></h2>
-        <p class="lead">Car Hunter é o serviço da Grid Car Check que busca no mercado carros que atendam aos seus critérios, em Curitiba e região metropolitana, e entrega cada carro já vistoriado. O valor é sob consulta, pois depende da busca e do carro encontrado.</p>
+        <p class="lead">Car Hunter é o serviço da Grid Car Check que busca no mercado carros que atendam aos seus critérios, em Curitiba e região metropolitana, e entrega cada carro já vistoriado. O valor é R$&nbsp;2.500. <a href="/car-hunter/">Veja a página completa do Car Hunter.</a></p>
 
         <h3 style="margin-top:40px">Como funciona</h3>
         <ol class="steps" style="margin-top:24px">
@@ -359,10 +361,10 @@
           </li>
         </ol>
 
-        <p class="placeholder-inline">Valor sob consulta — ainda não definido; combine direto com o cliente pelo WhatsApp.</p>
+        <p class="faint">Valor: R$&nbsp;2.500, único, com as vistorias dos candidatos incluídas.</p>
 
         <p style="margin-top:28px"><a href="#" class="btn btn--ghost" data-whatsapp
-          data-mensagem="Oi! Vi a Grid no Instagram e quero saber sobre o Car Hunter (busca de carro já vistoriado).">Saber mais sobre o Car Hunter</a></p>
+          data-mensagem="Oi! Vi o site da Grid e quero saber sobre o Car Hunter. O carro que eu procuro é um ">Saber mais sobre o Car Hunter</a> <a href="/car-hunter/" class="btn btn--ghost">Ver a página do Car Hunter</a></p>
       </div>
     </section>
 
@@ -382,7 +384,7 @@
           </details>
           <details>
             <summary>Quanto custa o Car Hunter?</summary>
-            <p>O valor é sob consulta, conforme a busca e o carro encontrado.</p>
+            <p>R$ 2.500, valor único, qualquer que seja o valor do carro. As vistorias de todos os carros candidatos estão incluídas.</p>
           </details>
           <details>
             <summary>Quais são as 6 frentes inspecionadas na vistoria?</summary>

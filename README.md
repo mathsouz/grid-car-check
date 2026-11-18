@@ -9,6 +9,7 @@ landing-page/
 ├── index.html                              # Home institucional (/)
 ├── instagram/index.html                    # Landing de tráfego pago/Instagram (noindex)
 ├── servicos/index.html
+├── car-hunter/index.html
 ├── blog/
 │   ├── index.html                          # Hub
 │   ├── vistoria-cautelar-vs-pre-compra/
