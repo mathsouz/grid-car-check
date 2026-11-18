@@ -198,6 +198,7 @@
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
             <h3>Pintura</h3>
             <p>O espessímetro mede a tinta e separa original de retoque ou repintura.</p>
+            <span class="tag-med">Medida em micra</span>
           </article>
           <article class="card">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
@@ -208,6 +209,7 @@
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg>
             <h3>Scanner OBD</h3>
             <p>Lê as falhas registradas na central do carro.</p>
+            <span class="tag-med">Códigos de falha</span>
           </article>
           <article class="card">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4h-7"/><path d="M10 4H3"/><path d="M21 12h-9"/><path d="M8 12H3"/><path d="M21 20h-5"/><path d="M12 20H3"/><path d="M14 2v4"/><path d="M8 10v4"/><path d="M16 18v4"/></svg>
@@ -224,6 +226,17 @@
         <p class="faint">Duração: de 2,5 a 3,5 horas, conforme o carro. A Grid vai até o carro e combina o horário direto com o vendedor ou a loja.</p>
 
         <div class="card card--hot frame frame--card price">
+          <div class="calc" data-calc hidden>
+            <p class="eyebrow eyebrow--sm" id="calc-label">Quanto vale o carro que você vai comprar?</p>
+            <div class="chips" role="group" aria-labelledby="calc-label">
+              <button type="button" class="chip" aria-pressed="true" data-valor="500">Até R$&nbsp;100&nbsp;mil</button>
+              <button type="button" class="chip" aria-pressed="false" data-valor="700">R$&nbsp;100 a 300&nbsp;mil</button>
+              <button type="button" class="chip" aria-pressed="false" data-valor="900">R$&nbsp;300 a 500&nbsp;mil</button>
+              <button type="button" class="chip" aria-pressed="false" data-valor="1200">R$&nbsp;500&nbsp;mil a 1&nbsp;milhão</button>
+            </div>
+            <p class="calc__out" aria-live="polite"><span class="calc__label">Sua vistoria</span> <strong class="calc__val" data-valor="500">R$&nbsp;500</strong></p>
+            <span class="calc__bar" aria-hidden="true"></span>
+          </div>
           <table>
             <caption class="sr">Preço da vistoria por faixa de valor do carro</caption>
             <thead>
@@ -289,13 +302,31 @@
         <p class="eyebrow">Novidade · Laudo 3D</p>
         <h2>Seu laudo em 3D, <span class="accent">peça por peça.</span></h2>
         <p class="lead">Todo laudo da Vistoria Pré-Compra vem com um link que abre o carro em 3D no celular ou no computador, sem instalar nada e sem cadastro. Cada peça com apontamento aparece numerada e colorida conforme o status do laudo. O PDF continua sendo o documento completo, com todas as fotos e o parecer técnico; o 3D é o jeito mais rápido de entendê-lo.</p>
-        <figure class="shots">
-          <div class="shots__row">
-            <img src="/assets/images/laudo-3d-lataria.jpg" width="640" height="1271" loading="lazy" alt="Laudo 3D no celular: SUV em 3D com peças numeradas e coloridas por status, botões de vista e abas Lataria e Estrutura">
-            <img src="/assets/images/laudo-3d-apontamentos.jpg" width="640" height="1271" loading="lazy" alt="Laudo 3D no celular: lista de apontamentos da lataria com scanner, repinturas, peça avariada, para-brisa trocado e pneus">
+        <div class="ld" data-laudo-demo>
+          <div class="ld__col">
+            <div class="ld__tabs" role="tablist" aria-label="Telas do Laudo 3D">
+              <button type="button" class="ld__tab" role="tab" id="ld-t1" aria-selected="true" aria-controls="ld-p1">Carro em 3D</button>
+              <button type="button" class="ld__tab" role="tab" id="ld-t2" aria-selected="false" aria-controls="ld-p2" tabindex="-1">Apontamentos</button>
+            </div>
+            <div class="ld__phone">
+              <img id="ld-p1" role="tabpanel" aria-labelledby="ld-t1" src="/assets/images/laudo-3d-lataria.jpg" width="640" height="1271" loading="lazy" alt="Laudo 3D no celular: SUV em 3D com peças numeradas e coloridas por status, botões de vista e abas Lataria e Estrutura">
+              <img id="ld-p2" role="tabpanel" aria-labelledby="ld-t2" src="/assets/images/laudo-3d-apontamentos.jpg" width="640" height="1271" loading="lazy" hidden alt="Laudo 3D no celular: lista de apontamentos da lataria com scanner, repinturas, peça avariada, para-brisa trocado e pneus">
+            </div>
           </div>
-          <figcaption>Exemplo de Laudo 3D: o carro com as peças numeradas e a lista de apontamentos.</figcaption>
-        </figure>
+          <div class="ld__side">
+            <p class="eyebrow eyebrow--sm">Toque numa cor</p>
+            <div class="ld__legend">
+              <button type="button" class="sw" style="--c:var(--st-ok)" aria-pressed="false" data-nome="OK" data-def="pintura original, pequenos riscos ou estrutura sem apontamento.">OK</button>
+              <button type="button" class="sw" style="--c:var(--st-repintura)" aria-pressed="false" data-nome="Repintura" data-def="repintura ou repintura com massa.">Repintura</button>
+              <button type="button" class="sw" style="--c:var(--st-batido)" aria-pressed="false" data-nome="Batido" data-def="estrutura batida.">Batido</button>
+              <button type="button" class="sw" style="--c:var(--st-danificado)" aria-pressed="false" data-nome="Danificado" data-def="peça avariada, estrutura danificada ou com corrosão, pneu em atenção ou crítico.">Danificado</button>
+              <button type="button" class="sw" style="--c:var(--st-reparo)" aria-pressed="false" data-nome="Reparo" data-def="estrutura reparada.">Reparo</button>
+              <button type="button" class="sw" style="--c:var(--st-substituido)" aria-pressed="false" data-nome="Substituído" data-def="peça substituída, como um vidro trocado.">Substituído</button>
+            </div>
+            <p class="ld__def" aria-live="polite">Cada peça do carro ganha uma cor conforme o status do laudo. Toque numa cor para ver o que ela significa.</p>
+            <p class="faint ld__cap">Exemplo de Laudo 3D. Ao tocar na peça no 3D, aparece sempre o status exato do laudo.</p>
+          </div>
+        </div>
 
         <h3 style="margin-top:40px">O que você vê no Laudo 3D</h3>
         <div class="grid3 grid3--fronts">
@@ -430,8 +461,8 @@
         loading="lazy">
       <p class="mono">Curitiba e região metropolitana</p>
       <p class="mono">Seg a sáb, 8h às 20h</p>
-      <p class="mono"><a href="https://instagram.com/grid.carconsulting" target="_blank"
-          rel="noopener">@grid.carconsulting</a> · <a href="#" data-whatsapp>WhatsApp</a></p>
+      <p class="mono"><a href="https://instagram.com/grid.carcheck" target="_blank"
+          rel="noopener">@grid.carcheck</a> · <a href="#" data-whatsapp>WhatsApp</a></p>
       <p class="mono">© <span id="ano"></span> Grid Car Check</p>
     </div>
   </footer>

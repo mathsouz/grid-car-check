@@ -8,7 +8,7 @@ web
 
 ## Users
 
-Compradores de carro usado, de 25 a 55 anos, em Curitiba e região metropolitana, que compram seminovos principalmente de particular ou de loja pequena/multimarcas (OLX, classificados). Chegam do Instagram (@grid.carconsulting), quase sempre pelo celular, com um carro específico em vista, desconfiados e com poucos dias para decidir. O trabalho deles: saber o que o carro realmente tem antes de assinar e ter base para negociar ou desistir. Incluem compradoras; sem paternalismo.
+Compradores de carro usado, de 25 a 55 anos, em Curitiba e região metropolitana, que compram seminovos principalmente de particular ou de loja pequena/multimarcas (OLX, classificados). Chegam do Instagram (@grid.carcheck), quase sempre pelo celular, com um carro específico em vista, desconfiados e com poucos dias para decidir. O trabalho deles: saber o que o carro realmente tem antes de assinar e ter base para negociar ou desistir. Incluem compradoras; sem paternalismo.
 
 ## Product Purpose
 
@@ -62,7 +62,7 @@ Static HTML, CSS e JavaScript sem build, hospedado na Vercel via GitHub (definid
 
 ## Brand Commitments
 
-Nome oficial: Grid Car Check (confirmado pelo usuário; o Instagram continua @grid.carconsulting). O logo em `assets/images/grid-logo.png` já foi substituído pelo texto "CAR CHECK". O usuário indicou como vinculante o sistema visual do deck da Grid (desenho técnico, grafite e laranja), com o laranja da logo (#F93F06) em botões e faixas; o detalhamento visual pertence ao new-work e ao DESIGN.md.
+Nome oficial: Grid Car Check (confirmado pelo usuário; o Instagram é @grid.carcheck (antes era grid.carconsulting; corrigido em 2026-11-17)). O logo em `assets/images/grid-logo.png` já foi substituído pelo texto "CAR CHECK". O usuário indicou como vinculante o sistema visual do deck da Grid (desenho técnico, grafite e laranja), com o laranja da logo (#F93F06) em botões e faixas; o detalhamento visual pertence ao new-work e ao DESIGN.md.
 
 ## Evidence on Hand
 

@@ -175,6 +175,22 @@
             <p class="from"><span class="eyebrow">Vistoria</span> <strong>a partir de R$&nbsp;500</strong></p>
           </div>
           <p class="faint">Sem comissão nem ligação com vendedor ou loja. +300 vistorias realizadas · 8 anos de experiência.</p>
+          <div class="live" data-live>
+            <p class="eyebrow eyebrow--sm">Exemplo de laudo · SUV</p>
+            <dl class="live__stats">
+              <div><dt>Códigos do scanner</dt><dd class="count-up" data-target="3">3</dd></div>
+              <div><dt>Repinturas</dt><dd class="count-up" data-target="2">2</dd></div>
+              <div><dt>Batidos</dt><dd class="count-up" data-target="0">0</dd></div>
+              <div><dt>Danificados</dt><dd class="count-up" data-target="3">3</dd></div>
+            </dl>
+            <ul class="live__list">
+              <li style="--i:0">Capô <span class="live__tag" style="--c:var(--st-repintura)">Repintura</span></li>
+              <li style="--i:1">Porta dianteira esquerda <span class="live__tag" style="--c:var(--st-repintura)">Com massa</span></li>
+              <li style="--i:2">Paralama traseiro direito <span class="live__tag" style="--c:var(--st-danificado)">Avariado</span></li>
+              <li style="--i:3">Pneu traseiro direito <span class="live__tag" style="--c:var(--st-danificado)">Crítico</span></li>
+            </ul>
+            <p class="live__foot">Mostrando 4 de 7 apontamentos</p>
+          </div>
         </div>
         <aside class="card hero__proof">
           <p class="eyebrow eyebrow--sm">Caso real</p>
@@ -243,6 +259,7 @@
             </svg>
             <h3>Pintura</h3>
             <p>O espessímetro mede a tinta e separa original de retoque ou repintura.</p>
+            <span class="tag-med">Medida em micra</span>
           </article>
           <article class="card">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -259,6 +276,7 @@
             </svg>
             <h3>Scanner OBD</h3>
             <p>Lê as falhas registradas na central do carro.</p>
+            <span class="tag-med">Códigos de falha</span>
           </article>
           <article class="card">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -338,13 +356,31 @@
         <p class="eyebrow">Novidade · Laudo 3D</p>
         <h2>Seu carro em 3D, <span class="accent">peça por peça.</span></h2>
         <p class="lead">Além do PDF, você recebe um link que abre o carro em 3D no celular. Sem instalar nada, sem cadastro.</p>
-        <figure class="shots">
-          <div class="shots__row">
-            <img src="/assets/images/laudo-3d-lataria.jpg" width="640" height="1271" loading="lazy" alt="Laudo 3D no celular: SUV em 3D com peças numeradas e coloridas por status, botões de vista e abas Lataria e Estrutura">
-            <img src="/assets/images/laudo-3d-apontamentos.jpg" width="640" height="1271" loading="lazy" alt="Laudo 3D no celular: lista de apontamentos da lataria com scanner, repinturas, peça avariada, para-brisa trocado e pneus">
+        <div class="ld" data-laudo-demo>
+          <div class="ld__col">
+            <div class="ld__tabs" role="tablist" aria-label="Telas do Laudo 3D">
+              <button type="button" class="ld__tab" role="tab" id="ld-t1" aria-selected="true" aria-controls="ld-p1">Carro em 3D</button>
+              <button type="button" class="ld__tab" role="tab" id="ld-t2" aria-selected="false" aria-controls="ld-p2" tabindex="-1">Apontamentos</button>
+            </div>
+            <div class="ld__phone">
+              <img id="ld-p1" role="tabpanel" aria-labelledby="ld-t1" src="/assets/images/laudo-3d-lataria.jpg" width="640" height="1271" loading="lazy" alt="Laudo 3D no celular: SUV em 3D com peças numeradas e coloridas por status, botões de vista e abas Lataria e Estrutura">
+              <img id="ld-p2" role="tabpanel" aria-labelledby="ld-t2" src="/assets/images/laudo-3d-apontamentos.jpg" width="640" height="1271" loading="lazy" hidden alt="Laudo 3D no celular: lista de apontamentos da lataria com scanner, repinturas, peça avariada, para-brisa trocado e pneus">
+            </div>
           </div>
-          <figcaption>Exemplo de Laudo 3D: o carro com as peças numeradas e a lista de apontamentos.</figcaption>
-        </figure>
+          <div class="ld__side">
+            <p class="eyebrow eyebrow--sm">Toque numa cor</p>
+            <div class="ld__legend">
+              <button type="button" class="sw" style="--c:var(--st-ok)" aria-pressed="false" data-nome="OK" data-def="pintura original, pequenos riscos ou estrutura sem apontamento.">OK</button>
+              <button type="button" class="sw" style="--c:var(--st-repintura)" aria-pressed="false" data-nome="Repintura" data-def="repintura ou repintura com massa.">Repintura</button>
+              <button type="button" class="sw" style="--c:var(--st-batido)" aria-pressed="false" data-nome="Batido" data-def="estrutura batida.">Batido</button>
+              <button type="button" class="sw" style="--c:var(--st-danificado)" aria-pressed="false" data-nome="Danificado" data-def="peça avariada, estrutura danificada ou com corrosão, pneu em atenção ou crítico.">Danificado</button>
+              <button type="button" class="sw" style="--c:var(--st-reparo)" aria-pressed="false" data-nome="Reparo" data-def="estrutura reparada.">Reparo</button>
+              <button type="button" class="sw" style="--c:var(--st-substituido)" aria-pressed="false" data-nome="Substituído" data-def="peça substituída, como um vidro trocado.">Substituído</button>
+            </div>
+            <p class="ld__def" aria-live="polite">Cada peça do carro ganha uma cor conforme o status do laudo. Toque numa cor para ver o que ela significa.</p>
+            <p class="faint ld__cap">Exemplo de Laudo 3D. Ao tocar na peça no 3D, aparece sempre o status exato do laudo.</p>
+          </div>
+        </div>
         <ul class="facts" style="margin-top:32px">
           <li><strong>Cada peça com apontamento</strong> aparece numerada, na cor do status: repintura, batido, danificado, reparo ou substituído</li>
           <li><strong>Estrutura à vista:</strong> com a lataria transparente, como num raio-X, mostra 25 peças estruturais como longarinas e colunas</li>
@@ -396,6 +432,17 @@
         <h2>A partir de <span class="accent">R$&nbsp;500.</span></h2>
         <p class="lead">O valor varia conforme o preço do carro que você vai comprar.</p>
         <div class="card card--hot frame frame--card price">
+          <div class="calc" data-calc hidden>
+            <p class="eyebrow eyebrow--sm" id="calc-label">Quanto vale o carro que você vai comprar?</p>
+            <div class="chips" role="group" aria-labelledby="calc-label">
+              <button type="button" class="chip" aria-pressed="true" data-valor="500">Até R$&nbsp;100&nbsp;mil</button>
+              <button type="button" class="chip" aria-pressed="false" data-valor="700">R$&nbsp;100 a 300&nbsp;mil</button>
+              <button type="button" class="chip" aria-pressed="false" data-valor="900">R$&nbsp;300 a 500&nbsp;mil</button>
+              <button type="button" class="chip" aria-pressed="false" data-valor="1200">R$&nbsp;500&nbsp;mil a 1&nbsp;milhão</button>
+            </div>
+            <p class="calc__out" aria-live="polite"><span class="calc__label">Sua vistoria</span> <strong class="calc__val" data-valor="500">R$&nbsp;500</strong></p>
+            <span class="calc__bar" aria-hidden="true"></span>
+          </div>
           <table>
             <caption class="sr">Preço da vistoria por faixa de valor do carro</caption>
             <thead>
@@ -553,8 +600,8 @@
       <img class="logo" src="/assets/images/grid-logo.png" alt="Grid Car Check" width="110" height="28" loading="lazy">
       <p class="mono">Curitiba e região metropolitana</p>
       <p class="mono">Seg a sáb, 8h às 20h</p>
-      <p class="mono"><a href="https://instagram.com/grid.carconsulting" target="_blank"
-          rel="noopener">@grid.carconsulting</a> · <a href="#" data-whatsapp
+      <p class="mono"><a href="https://instagram.com/grid.carcheck" target="_blank"
+          rel="noopener">@grid.carcheck</a> · <a href="#" data-whatsapp
           data-mensagem="Oi! Vi a Grid no Instagram e quero saber sobre a vistoria pré-compra. O carro é um ">WhatsApp</a></p>
       <p class="mono">© <span id="ano"></span> Grid Car Check</p>
     </div>

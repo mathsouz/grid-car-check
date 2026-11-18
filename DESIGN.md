@@ -11,6 +11,7 @@ colors:
   cinza-claro: "#A7AFB8"
   cinza-legenda: "#7E8791"
   aviso-placeholder: "#FFD166"
+  azul-de-medicao: "#8DB8FF"
 typography:
   display:
     fontFamily: "Oswald, Arial, sans-serif"
@@ -103,7 +104,7 @@ A hierarquia é fixa em toda seção: etiqueta mono laranja, título grande em O
 
 ## Colors
 
-Grafite quente e frio ao mesmo tempo: fundo quase preto azulado, texto em branco quente, laranja como único acento.
+Grafite quente e frio ao mesmo tempo: fundo quase preto azulado, texto em branco quente, laranja como acento de ação e **azul de medição como segunda cor, só para dado e verificação** (decidido em 2026-11-17, ver "Terceira cor" abaixo).
 
 ### Primary
 - **Laranja da Logo** (#F93F06): botões, faixas e a seção final invertida. É o laranja da marca, mais avermelhado. Contraste do texto grafite sobre ele: cerca de 5,1:1.
@@ -118,7 +119,20 @@ Grafite quente e frio ao mesmo tempo: fundo quase preto azulado, texto em branco
 - **Cinza Legenda** (#7E8791): rodapé, legendas e cabeçalhos de tabela.
 - **Aviso de Placeholder** (#FFD166): só para marcar lacunas de conteúdo que o dono do produto precisa preencher; nunca faz parte da identidade e deve sumir antes de publicar.
 
+### Terceira cor (adicionada em 2026-11-17)
+- **Azul de Medição** (#8DB8FF): a cor do dado e da verificação. Contraste 9,3:1 sobre o grafite e 8,6:1 sobre o painel. Fica azul para quem tem daltonismo vermelho-verde (deuteranopia e protanopia), enquanto o laranja vira oliva; é por isso que ela forma o par que funciona para todo mundo.
+- **Onde entra:** ícones da lista "Incluso", números e rótulos dos achados da vistoria (ex.: "35 códigos de erro"), etiquetas de verificação (espessímetro, scanner), links dentro de texto corrido de artigos de blog e cabeçalhos de dado do laudo.
+- **Onde NÃO entra:** botões, CTA, título de seção, palavra de destaque do H1, marcas de canto, fundo de seção, borda do cartão em destaque. Ação e alerta continuam laranja. Meta de ocupação: 2 a 3% da superfície.
+- **Conflito a evitar:** o Laudo 3D usa `--st-reparo` (#5B9DFF), também azul. Nunca colocar o azul de medição dentro de legenda ou etiqueta de status do laudo; lá o azul quer dizer "reparo".
+- Testado contra paletas da media.io (Brasa Industrial, Citrus Charcoal, Copper Asphalt, Tática Fosca, Fogueira Cósmica) e em simulação de daltonismo. O tom gelo muito claro (#D7E3FF) da Fogueira Cósmica foi descartado: vira quase branco e não se distingue do texto.
+- Variável sugerida no CSS: `--measure: #8DB8FF;`.
+- **Aplicado em 2026-11-17:** `--measure` em `.incl svg`, `.facts strong`, números do cartão "ao vivo" (`.live__stats dd`), etiqueta `.tag-med` ("Medida em micra" na Pintura, "Códigos de falha" no Scanner OBD) e links em texto corrido dos posts (`.article p a`). Nos botões da calculadora e do Laudo 3D o estado selecionado ganha marcador ✓ ou linha grossa além da cor.
+
 ### Named Rules
+**The Medição Rule.** O azul só aparece onde há um dado ou uma verificação. Se for botão, alerta ou chamada à ação, é laranja. Se for decoração, não entra.
+
+**The Cor Nunca Sozinha Rule.** Nenhuma informação depende só da cor. Status do laudo, estado de botão e destaque de linha sempre vêm com ícone, palavra ou posição. Para parte do público o laranja vira oliva, então o botão precisa funcionar por texto, seta e forma.
+
 **The Sinalização Rule.** O laranja marca onde o olho precisa ir. Se tudo é laranja, nada sinaliza: etiquetas, números-chave, botões e o cartão mais importante, e só isso.
 
 **The Two Oranges Rule.** #F93F06 pinta superfícies (botões, faixas); #FF6B1A colore texto pequeno e traços. Os dois não trocam de papel. O ajuste fino vive nas variáveis `--brand` e `--accent`.
@@ -190,6 +204,18 @@ Barra fixa no topo com fundo grafite a 92% de opacidade e desfoque, borda inferi
 ### Placeholder (temporário)
 Caixa tracejada em amarelo (#FFD166) com texto mono. Sinaliza conteúdo que o dono do produto ainda precisa fornecer (foto do laudo, Reel, formas de pagamento, preço do Car Hunter); deve ser removida antes de publicar.
 
+## Interações (adicionado em 2026-11-17)
+
+Inspiradas num outro projeto do dono (Car Social Club), adaptadas ao sistema da Grid: só o comportamento, sem o visual (fundo claro, selo girando e título inclinado ficaram de fora). Todas respeitam `prefers-reduced-motion` e têm fallback sem JS.
+
+- **Calculadora de preço** (`/servicos/` e `/instagram/`): botões por faixa de valor do carro; o valor da vistoria sobe animado, ganha um pulso e a linha da tabela correspondente fica em destaque. Sem JS aparece só a tabela.
+- **Laudo 3D "toque e veja"**: abas entre as telas reais (carro em 3D, apontamentos) e legenda de cores clicável que explica cada status. Substitui as duas imagens estáticas.
+- **Laudo "ao vivo"** (hero de `/instagram/`): cartão de exemplo com contadores que sobem e apontamentos que entram um a um. É um exemplo, e o cartão diz isso.
+- **Pulso e linha que se desenha**: `.bump` (escala 1 → 1,06 → 1, 0,35s) quando um número muda ou termina de contar; `.draw` (a linha cresce da esquerda, 0,45s, `--ease-snap`) na aba ativa, na barra da calculadora e no topo do cartão "ao vivo". É feedback de uma ação, não decoração.
+
+### Cores de status do Laudo 3D
+`--st-ok` #C9C5B8, `--st-repintura` #F0B429, `--st-batido` #F94A15, `--st-danificado` #E0505A, `--st-reparo` #5B9DFF, `--st-substituido` #A897F0. São as cores do app do Laudo 3D, dado do produto, e só aparecem nas legendas e etiquetas de status. Não fazem parte da paleta da marca e não substituem o laranja de sinalização.
+
 ## Do's and Don'ts
 
 ### Do:
@@ -198,6 +224,8 @@ Caixa tracejada em amarelo (#FFD166) com texto mono. Sinaliza conteúdo que o do
 - **Do** aplicar a grade de 64px em todas as seções escuras e as marcas de canto apenas no hero e no cartão em destaque.
 - **Do** manter o texto corrido em até 20px e alvos de toque de pelo menos 44px.
 - **Do** garantir contraste mínimo de 4,5:1 e respeitar `prefers-reduced-motion`.
+- **Do** usar o azul de medição (#8DB8FF) em ícones de "Incluso" e em números de achados, nunca em botão.
+- **Do** acompanhar toda cor de status com ícone ou palavra.
 
 ### Don't:
 - **Don't** usar sombras para dar destaque; o destaque é borda laranja de 2px.
@@ -205,3 +233,5 @@ Caixa tracejada em amarelo (#FFD166) com texto mono. Sinaliza conteúdo que o do
 - **Don't** espalhar o laranja em texto corrido, fundos grandes fora da seção final ou ícones decorativos.
 - **Don't** usar curvas em setas ou line-art de carro; setas são retas.
 - **Don't** publicar com placeholders amarelos visíveis.
+- **Don't** usar o azul de medição como fundo grande, em CTA ou dentro de legenda de status do laudo.
+- **Don't** usar verde e vermelho como única forma de separar dois estados.

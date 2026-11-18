@@ -83,7 +83,7 @@
         "headline": "Laudo 3D de Vistoria: Veja o Carro Usado Peça por Peça",
         "description": "O Laudo 3D da Grid Car Check abre o carro em 3D no celular, com foto, medição e status de cada peça. Veja como funciona a vistoria pré-compra em Curitiba.",
         "datePublished": "2026-11-13",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-17",
         "inLanguage": "pt-BR",
         "author": { "@type": "Person", "name": "Matheus", "jobTitle": "Especialista em vistoria de veículos" },
         "publisher": { "@id": "https://gridcarcheck.com.br/#empresa" },
@@ -192,13 +192,31 @@
         <p style="margin-top:24px"><a href="#" class="btn" data-whatsapp
           data-mensagem="Oi! Vi o blog da Grid e quero pedir uma vistoria pré-compra com Laudo 3D. O carro é um ">Pedir vistoria no WhatsApp</a></p>
 
-        <figure class="shots">
-          <div class="shots__row">
-            <img src="/assets/images/laudo-3d-lataria.jpg" width="640" height="1271" loading="lazy" alt="Laudo 3D no celular: SUV em 3D com peças numeradas e coloridas por status, botões de vista e abas Lataria e Estrutura">
-            <img src="/assets/images/laudo-3d-apontamentos.jpg" width="640" height="1271" loading="lazy" alt="Laudo 3D no celular: lista de apontamentos da lataria com scanner, repinturas, peça avariada, para-brisa trocado e pneus">
+        <div class="ld" data-laudo-demo>
+          <div class="ld__col">
+            <div class="ld__tabs" role="tablist" aria-label="Telas do Laudo 3D">
+              <button type="button" class="ld__tab" role="tab" id="ld-t1" aria-selected="true" aria-controls="ld-p1">Carro em 3D</button>
+              <button type="button" class="ld__tab" role="tab" id="ld-t2" aria-selected="false" aria-controls="ld-p2" tabindex="-1">Apontamentos</button>
+            </div>
+            <div class="ld__phone">
+              <img id="ld-p1" role="tabpanel" aria-labelledby="ld-t1" src="/assets/images/laudo-3d-lataria.jpg" width="640" height="1271" loading="lazy" alt="Laudo 3D no celular: SUV em 3D com peças numeradas e coloridas por status, botões de vista e abas Lataria e Estrutura">
+              <img id="ld-p2" role="tabpanel" aria-labelledby="ld-t2" src="/assets/images/laudo-3d-apontamentos.jpg" width="640" height="1271" loading="lazy" hidden alt="Laudo 3D no celular: lista de apontamentos da lataria com scanner, repinturas, peça avariada, para-brisa trocado e pneus">
+            </div>
           </div>
-          <figcaption>Exemplo de Laudo 3D: o carro com as peças numeradas e a lista de apontamentos.</figcaption>
-        </figure>
+          <div class="ld__side">
+            <p class="eyebrow eyebrow--sm">Toque numa cor</p>
+            <div class="ld__legend">
+              <button type="button" class="sw" style="--c:var(--st-ok)" aria-pressed="false" data-nome="OK" data-def="pintura original, pequenos riscos ou estrutura sem apontamento.">OK</button>
+              <button type="button" class="sw" style="--c:var(--st-repintura)" aria-pressed="false" data-nome="Repintura" data-def="repintura ou repintura com massa.">Repintura</button>
+              <button type="button" class="sw" style="--c:var(--st-batido)" aria-pressed="false" data-nome="Batido" data-def="estrutura batida.">Batido</button>
+              <button type="button" class="sw" style="--c:var(--st-danificado)" aria-pressed="false" data-nome="Danificado" data-def="peça avariada, estrutura danificada ou com corrosão, pneu em atenção ou crítico.">Danificado</button>
+              <button type="button" class="sw" style="--c:var(--st-reparo)" aria-pressed="false" data-nome="Reparo" data-def="estrutura reparada.">Reparo</button>
+              <button type="button" class="sw" style="--c:var(--st-substituido)" aria-pressed="false" data-nome="Substituído" data-def="peça substituída, como um vidro trocado.">Substituído</button>
+            </div>
+            <p class="ld__def" aria-live="polite">Cada peça do carro ganha uma cor conforme o status do laudo. Toque numa cor para ver o que ela significa.</p>
+            <p class="faint ld__cap">Exemplo de Laudo 3D. Ao tocar na peça no 3D, aparece sempre o status exato do laudo.</p>
+          </div>
+        </div>
 
         <h2>Por que um laudo em 3D?</h2>
         <p>Um laudo de vistoria costuma ser um PDF longo, com listas de itens e fotos. Quem não é técnico lê "longarina dianteira direita batida" e não sabe onde fica essa peça nem o quanto isso pesa. O Laudo 3D resolve esse ponto: a longarina vira uma peça colorida no carro, que você vê onde está e toca para abrir a foto.</p>
@@ -405,8 +423,8 @@
         loading="lazy">
       <p class="mono">Curitiba e região metropolitana</p>
       <p class="mono">Seg a sáb, 8h às 20h</p>
-      <p class="mono"><a href="https://instagram.com/grid.carconsulting" target="_blank"
-          rel="noopener">@grid.carconsulting</a> · <a href="#" data-whatsapp>WhatsApp</a></p>
+      <p class="mono"><a href="https://instagram.com/grid.carcheck" target="_blank"
+          rel="noopener">@grid.carcheck</a> · <a href="#" data-whatsapp>WhatsApp</a></p>
       <p class="mono">© <span id="ano"></span> Grid Car Check</p>
     </div>
   </footer>

@@ -2,7 +2,7 @@
 
 Site da Grid Car Check (vistoria técnica pré-compra de carros usados, Curitiba e região metropolitana), em `gridcarcheck.com.br`.
 
-**Leia `PRODUCT.md` e `DESIGN.md` antes de qualquer alteração de conteúdo ou visual.** Eles têm o contexto de produto (público, posicionamento, preço, regras do que pode/não pode ser escrito) e o design system ("A Prancheta da Oficina": grafite, laranja de sinalização, marcas de canto). Este arquivo não repete esse conteúdo — só orienta como trabalhar no repo.
+**Leia `PRODUCT.md`, `DESIGN.md` e `MARCA.md` antes de qualquer alteração de conteúdo ou visual.** (`MARCA.md` é o manual de marca; `ATUALIZACAO-SITE.md` lista o que ainda falta aplicar no site.) Eles têm o contexto de produto (público, posicionamento, preço, regras do que pode/não pode ser escrito) e o design system ("A Prancheta da Oficina": grafite, laranja de sinalização, marcas de canto). Este arquivo não repete esse conteúdo — só orienta como trabalhar no repo.
 
 ## Stack e hospedagem
 
@@ -61,7 +61,7 @@ Nada disso vem junto se você clonar o repo num ambiente novo — são contas se
 - **Google Search Console**: propriedade `gridcarcheck.com.br`.
 - **Google Analytics 4** e **Meta Business Suite** (Pixel): contas do usuário, só os IDs estão no código.
 - **Google Business Profile**: `https://share.google/vexyMtsoNz0kqmHyh` (sem endereço físico cadastrado — o especialista vai até o carro).
-- **Instagram**: `@grid.carconsulting`. O link da bio deve apontar para `/instagram/`.
+- **Instagram**: `@grid.carcheck`. O link da bio deve apontar para `/instagram/`.
 
 ## Ferramentas locais (gitignored — não vêm num `git clone` novo)
 
@@ -77,3 +77,5 @@ Nada disso vem junto se você clonar o repo num ambiente novo — são contas se
 - A navbar (Home/Serviços/Blog) aparece em todas as páginas, inclusive em `/instagram/` — decisão explícita do usuário, mesmo contrariando o princípio original de "uma página, um CTA, sem menu".
 - Vídeos dos Reels não têm `autoplay` (removido por peso no mobile); tocam via `IntersectionObserver` ao entrar na tela.
 - Botões têm raio de 4px (não 8px) e seta no hover; ícones de conteúdo usam ponta quadrada, não arredondada — ajustes da crítica de identidade visual de out/2026, documentados em `DESIGN.md`.
+- Terceira cor da marca: **azul de medição #8DB8FF**, só para dado e verificação (ícones de "Incluso", números de achados), nunca em botão/CTA/fundo grande nem dentro de legenda de status do Laudo 3D. Decidido em 2026-11-17 após teste de contraste e simulação de daltonismo (o dono é daltônico). Regra irmã: a cor nunca carrega informação sozinha.
+- Instagram oficial: **@grid.carcheck** (o antigo `grid.carconsulting` está errado onde ainda aparecer).
