@@ -197,6 +197,41 @@ function configurarLaudoAoVivo() {
   obs.observe(cartao);
 }
 
+// Carrossel de vistorias: botões, barra de progresso que se desenha e contador. Sem JS rola com o dedo.
+function configurarCarrossel() {
+  const car = document.querySelector("[data-carrossel]");
+  if (!car) return;
+  const trilho = car.querySelector(".car__track");
+  const slides = Array.from(trilho.querySelectorAll(".car__slide"));
+  const anterior = car.querySelector("[data-car-prev]");
+  const proximo = car.querySelector("[data-car-next]");
+  const barra = car.querySelector(".car__bar span");
+  const contador = car.querySelector(".car__count");
+  const reduz = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const passo = () => slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : trilho.clientWidth;
+  let marcado = false;
+  function atualizar() {
+    const max = trilho.scrollWidth - trilho.clientWidth;
+    const pos = trilho.scrollLeft;
+    const i = Math.min(slides.length - 1, Math.round(pos / passo()));
+    const visiveis = trilho.clientWidth / passo();
+    barra.style.transform = "scaleX(" + (max > 0 ? Math.max(0.12, Math.min(1, (pos / max) * (1 - visiveis / slides.length) + visiveis / slides.length)) : 1) + ")";
+    contador.textContent = String(i + 1).padStart(2, "0") + " / " + String(slides.length).padStart(2, "0");
+    anterior.setAttribute("aria-disabled", String(pos <= 4));
+    proximo.setAttribute("aria-disabled", String(pos >= max - 4));
+  }
+  function ir(sentido) {
+    trilho.scrollBy({ left: sentido * passo(), behavior: reduz ? "auto" : "smooth" });
+    if (!marcado && typeof window.gtag === "function") { marcado = true; window.gtag("event", "carrossel_vistorias", lerUtms()); }
+  }
+  anterior.addEventListener("click", () => ir(-1));
+  proximo.addEventListener("click", () => ir(1));
+  let raf = 0;
+  trilho.addEventListener("scroll", () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(atualizar); }, { passive: true });
+  window.addEventListener("resize", atualizar);
+  atualizar();
+}
+
 // Menu mobile: o botão abre/fecha a navegação; qualquer link clicado fecha de novo
 function configurarMenu() {
   const botao = document.querySelector(".nav-toggle");
@@ -323,3 +358,4 @@ configurarContadores();
 configurarCalculadora();
 configurarLaudoDemo();
 configurarLaudoAoVivo();
+configurarCarrossel();

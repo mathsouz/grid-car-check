@@ -291,6 +291,30 @@ a:focus-visible, summary:focus-visible { outline: 3px solid var(--text); outline
 .tag-med { display: inline-block; margin-top: 14px; padding: 4px 8px; border: 1px solid var(--measure); border-radius: 4px; color: var(--measure); font: 700 12px/1.3 var(--mono); letter-spacing: 1.5px; text-transform: uppercase; }
 .article p a:not(.btn), .article li a:not(.btn), .article td a { color: var(--measure); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 
+/* Carrossel "Vistorias de verdade": fotos e prints reais com o dado em azul de medição (MARCA.md) */
+.car { margin-top: 32px; }
+.car__track { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-bottom: 4px; -webkit-overflow-scrolling: touch; }
+.car__track::-webkit-scrollbar { display: none; }
+.car__track:focus-visible { outline: 3px solid var(--text); outline-offset: 4px; }
+.car__slide { flex: 0 0 clamp(250px, 76vw, 340px); scroll-snap-align: start; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; transition: border-color .3s var(--ease); }
+.car__slide img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; background: var(--bg); }
+.car__cap { padding: 20px; }
+.car__cap .eyebrow { margin-bottom: 8px; }
+.car__dado { font: 700 clamp(26px, 5vw, 32px)/1.1 var(--display); color: var(--measure); }
+.car__txt { margin-top: 8px; color: var(--muted); font-size: 16px; line-height: 1.5; }
+.car__ctl { display: flex; align-items: center; gap: 16px; margin-top: 20px; }
+.car__btn { flex: none; width: 48px; height: 48px; display: inline-flex; align-items: center; justify-content: center; background: transparent; color: var(--text); border: 2px solid var(--line); border-radius: 4px; cursor: pointer; transition: border-color .2s, opacity .2s; }
+.car__btn svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: square; stroke-linejoin: miter; }
+.car__btn[aria-disabled="true"] { opacity: .35; cursor: default; }
+.car__btn:focus-visible { outline: 3px solid var(--text); outline-offset: 2px; }
+.car__bar { flex: 1; height: 2px; background: var(--line); }
+.car__bar span { display: block; height: 100%; background: var(--accent); transform-origin: left center; transform: scaleX(.12); transition: transform .25s var(--ease); }
+.car__count { flex: none; font: 500 var(--fs-mono)/1 var(--mono); letter-spacing: 2px; color: var(--faint); font-variant-numeric: tabular-nums; }
+@media (hover: hover) {
+  .car__slide:hover { border-color: rgba(255, 107, 26, .6); }
+  .car__btn:not([aria-disabled="true"]):hover { border-color: var(--accent); }
+}
+
 /* Sobre */
 .about { display: grid; gap: 32px; align-items: center; }
 .about__photo { width: 100%; max-width: 380px; aspect-ratio: 4/3; object-fit: cover; object-position: 50% 28%; border: 1px solid var(--line); border-radius: 8px; }
@@ -355,6 +379,7 @@ a:focus-visible, summary:focus-visible { outline: 3px solid var(--text); outline
   .frame--card.lock::before, .frame--card.lock::after { animation: none; }
   .faq details::details-content { transition: none; }
   .nav { transition: none; }
+  .car__bar span, .car__slide { transition: none; }
   .bump, .draw, .ld__phone img.in, .ld__tab[aria-selected="true"]::after, .live--run::before { animation: none; }
   .live--armed .live__list li, .live--run .live__list li { opacity: 1; animation: none; }
 }

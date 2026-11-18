@@ -211,6 +211,7 @@ Inspiradas num outro projeto do dono (Car Social Club), adaptadas ao sistema da 
 - **Calculadora de preço** (`/servicos/` e `/instagram/`): botões por faixa de valor do carro; o valor da vistoria sobe animado, ganha um pulso e a linha da tabela correspondente fica em destaque. Sem JS aparece só a tabela.
 - **Laudo 3D "toque e veja"**: abas entre as telas reais (carro em 3D, apontamentos) e legenda de cores clicável que explica cada status. Substitui as duas imagens estáticas.
 - **Laudo "ao vivo"** (hero de `/instagram/`): cartão de exemplo com contadores que sobem e apontamentos que entram um a um. É um exemplo, e o cartão diz isso.
+- **Carrossel "Vistorias de verdade"** (Home e `/instagram/`): fotos e prints reais (`assets/images/vistorias/`, 720×900, sem EXIF), um cartão por achado com etiqueta mono do carro, o dado em azul de medição e uma frase. Rolagem com encaixe, botões, contador e barra de progresso. Sem autoplay. As legendas só dizem o que as notas da vistoria sustentam.
 - **Pulso e linha que se desenha**: `.bump` (escala 1 → 1,06 → 1, 0,35s) quando um número muda ou termina de contar; `.draw` (a linha cresce da esquerda, 0,45s, `--ease-snap`) na aba ativa, na barra da calculadora e no topo do cartão "ao vivo". É feedback de uma ação, não decoração.
 
 ### Cores de status do Laudo 3D
