@@ -315,6 +315,13 @@ a:focus-visible, summary:focus-visible { outline: 3px solid var(--text); outline
   .car__btn:not([aria-disabled="true"]):hover { border-color: var(--accent); }
 }
 
+/* Foto real dentro de artigo */
+.article figure { margin: 28px 0; }
+.article figure img { width: 100%; max-width: 380px; height: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); }
+.article figcaption { margin-top: 10px; max-width: 380px; color: var(--faint); font-size: .9em; line-height: 1.5; }
+a.car__slide { text-decoration: none; color: inherit; }
+.car__slide video { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--bg); }
+
 /* Sobre */
 .about { display: grid; gap: 32px; align-items: center; }
 .about__photo { width: 100%; max-width: 380px; aspect-ratio: 4/3; object-fit: cover; object-position: 50% 28%; border: 1px solid var(--line); border-radius: 8px; }
